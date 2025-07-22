@@ -11,8 +11,8 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: 'hsl(0, 0%, 100%)',
+        foreground: 'hsl(0, 0%, 10%)',
         card: {
           DEFAULT: "var(--card)",
           foreground: "var(--card-foreground)",
@@ -41,7 +41,7 @@ export default {
           DEFAULT: "var(--destructive)",
           foreground: "var(--destructive-foreground)",
         },
-        border: "var(--border)",
+        border: 'hsl(214, 31%, 91%)',
         input: "var(--input)",
         ring: "var(--ring)",
         chart: {
