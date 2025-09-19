@@ -7,12 +7,10 @@ export default defineConfig({
   base: "./",
   root: "client", // your source folder
   build: {
-    outDir: "dist", // relative path only
-    emptyOutDir: true,
-    rollupOptions: {
-      input: "index.html",
-    },
-  },  
+    outDir: path.resolve(__dirname, "dist"),
+    emptyOutDir: true
+  },
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "client/src"),

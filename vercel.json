@@ -1,9 +1,11 @@
 {
   "version": 2,
   "builds": [
+    { "src": "api/server.ts", "use": "@vercel/node" },
     { "src": "package.json", "use": "@vercel/static-build" }
   ],
-  "buildCommand": "npm install && npm exec vite build",
-  "outputDirectory": "dist",
-  "routes": [{ "src": "/(.*)", "dest": "/index.html" }]
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/server.ts" },
+    { "src": "/(.*)", "dest": "/dist/$1" }
+  ]
 }
