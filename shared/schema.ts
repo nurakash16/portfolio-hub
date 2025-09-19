@@ -71,3 +71,16 @@ export type InsertExperience = z.infer<typeof insertExperienceSchema>;
 export type Experience = typeof experiences.$inferSelect;
 export type InsertAchievement = z.infer<typeof insertAchievementSchema>;
 export type Achievement = typeof achievements.$inferSelect;
+
+// Resource type used by client resource pages/cards
+export interface Resource {
+  id: number;
+  title: string;
+  description: string;
+  category: string;
+  imageUrl?: string | null;
+  readingTime: number;
+  skillLevel: "beginner" | "intermediate" | "advanced" | (string & {});
+  content?: string;
+  updatedAt: string | Date;
+}

@@ -15,17 +15,16 @@ export default function ProjectSection({ searchQuery }: ProjectSectionProps) {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [visibleCount, setVisibleCount] = useState(6);
 
-  const { data: projects = [], isLoading } = useQuery({
-    queryKey: ["/api/projects", { category: selectedCategory, search: searchQuery }],
-    queryFn: async () => {
-      const params = new URLSearchParams();
-      if (selectedCategory !== "all") params.append("category", selectedCategory);
-      if (searchQuery.trim()) params.append("search", searchQuery.trim());
+  const params = new URLSearchParams();
+  if (selectedCategory !== "all") params.append("category", selectedCategory);
+  if (searchQuery.trim()) params.append("search", searchQuery.trim());
+  const baseEnv = (import.meta.env.VITE_API_BASE as string | undefined)?.trim();
+  const isLocalhost = typeof window !== "undefined" && /^(https?:\/\/)(localhost|127\.0\.0\.1)/.test(window.location.origin);
+  const base = !baseEnv || isLocalhost ? "" : baseEnv;
+  const url = `${base}/api/projects${params.toString() ? `?${params.toString()}` : ""}`;
 
-      const response = await fetch(`${import.meta.env.VITE_API_BASE}/api/projects`);
-      if (!response.ok) throw new Error("Failed to fetch projects");
-      return response.json();
-    },
+  const { data: projects = [], isLoading } = useQuery({
+    queryKey: [url],
   }) as { data: Project[]; isLoading: boolean };
 
   const categories = [

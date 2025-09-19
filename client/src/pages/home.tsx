@@ -20,7 +20,7 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <ExperienceSection />
-      <ProjectSection searchQuery="" />
+      <ProjectSection searchQuery={searchQuery} />
       <AchievementSection />
       <ContactSection />
       <Footer />

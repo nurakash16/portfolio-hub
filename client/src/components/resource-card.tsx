@@ -22,7 +22,7 @@ export default function ResourceCard({ resource }: ResourceCardProps) {
     return category.charAt(0).toUpperCase() + category.slice(1);
   };
 
-  const getTimeAgo = (date: Date) => {
+  const getTimeAgo = (date: string | Date) => {
     const now = new Date();
     const diff = now.getTime() - new Date(date).getTime();
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));

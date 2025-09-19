@@ -60,8 +60,8 @@ export default function ContactSection() {
               <div className="space-y-6">
                 {contactInfo.map((contact, index) => {
                   const IconComponent = contact.icon;
-                  const gradients = {
-                    "Mail": "from-red-500 to-pink-500",
+                  const gradients: Record<string, string> = {
+                    "Email": "from-red-500 to-pink-500",
                     "LinkedIn": "from-blue-600 to-blue-700", 
                     "GitHub": "from-gray-700 to-gray-800",
                     "Facebook": "from-blue-600 to-blue-800"
