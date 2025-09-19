@@ -4,7 +4,7 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
-  base: "./", // ensures relative paths for deployment
+  base: "./", // relative paths
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "client/src"),
@@ -14,16 +14,10 @@ export default defineConfig({
   },
   root: path.resolve(__dirname, "client"), // source root
   build: {
-    outDir: path.resolve(__dirname, "dist"), // output at project root
+    outDir: path.resolve(__dirname, "dist"), // <-- place dist at project root
     emptyOutDir: true,
     rollupOptions: {
-      input: path.resolve(__dirname, "client/index.html"), // ensures index.html at root of dist
-    },
-  },
-  server: {
-    fs: {
-      strict: true,
-      deny: ["**/.*"],
+      input: path.resolve(__dirname, "client/index.html"), // ensure index.html in dist root
     },
   },
 });
