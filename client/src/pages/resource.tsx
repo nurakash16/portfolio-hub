@@ -6,29 +6,25 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
-import { ArrowLeft, Clock, Bookmark, CheckCircle, Lightbulb } from "lucide-react";
+import { ArrowLeft, Calendar, Bookmark, CheckCircle, Lightbulb } from "lucide-react";
 import { Link } from "wouter";
 import { useState } from "react";
-import type { Resource } from "@shared/schema";
+import type { Project } from "@shared/schema";
+import { apiRequest } from "@/lib/queryClient";
 
 export default function ResourcePage() {
   const [, params] = useRoute("/resource/:id");
   const resourceId = params?.id;
   const [searchQuery, setSearchQuery] = useState("");
 
-  const { data: resource, isLoading, error } = useQuery({
-    queryKey: ["/api/resources", resourceId],
+  const { data: project, isLoading, error } = useQuery({
+    queryKey: ["projects", resourceId],
     enabled: !!resourceId,
-  }) as { data: Resource | undefined; isLoading: boolean; error: Error | null };
-
-  const getSkillLevelClass = (skillLevel: string) => {
-    switch (skillLevel) {
-      case "beginner": return "skill-beginner";
-      case "intermediate": return "skill-intermediate";
-      case "advanced": return "skill-advanced";
-      default: return "skill-beginner";
-    }
-  };
+    queryFn: async () => {
+      const res = await apiRequest("GET", `projects/${resourceId}`);
+      return (await res.json()) as Project;
+    },
+  }) as { data: Project | undefined; isLoading: boolean; error: Error | null };
 
   const formatCategory = (category: string) => {
     return category.charAt(0).toUpperCase() + category.slice(1);
@@ -51,7 +47,7 @@ export default function ResourcePage() {
     );
   }
 
-  if (error || !resource) {
+  if (error || !project) {
     return (
       <div className="min-h-screen bg-light-bg">
         <Navigation searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
@@ -94,7 +90,7 @@ export default function ResourcePage() {
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbPage>{formatCategory(resource.category)}</BreadcrumbPage>
+              <BreadcrumbPage>{formatCategory(project.category)}</BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
@@ -107,25 +103,26 @@ export default function ResourcePage() {
           </Button>
         </Link>
 
-        {/* Resource Header */}
+        {/* Project Header */}
         <div className="mb-8">
           <div className="flex flex-wrap items-center gap-3 mb-4">
-            <Badge className={`skill-badge ${getSkillLevelClass(resource.skillLevel)}`}>
-              {resource.skillLevel}
+            <Badge variant="outline" className="text-xs">
+              {project.category.replace('_', ' ').toUpperCase()}
             </Badge>
-            <span className="category-tag">{formatCategory(resource.category)}</span>
-            <span className="reading-time flex items-center">
-              <Clock className="h-4 w-4 mr-1" />
-              {resource.readingTime} min read
-            </span>
+            {project.year && (
+              <span className="flex items-center text-gray-600">
+                <Calendar className="h-4 w-4 mr-1" />
+                {project.year}
+              </span>
+            )}
           </div>
           
           <h1 className="text-3xl md:text-4xl font-bold text-dark-text mb-4">
-            {resource.title}
+            {project.title}
           </h1>
           
           <p className="text-lg text-gray-600 mb-6 max-w-3xl">
-            {resource.description}
+            {project.description}
           </p>
 
           {/* Action Buttons */}
@@ -146,24 +143,29 @@ export default function ResourcePage() {
           <div className="progress-bar" style={{ width: "0%" }}></div>
         </div>
 
-        {/* Resource Image */}
-        {resource.imageUrl && (
+        {/* Project Image */}
+        {project.imageUrl && (
           <div className="mb-8">
             <img 
-              src={resource.imageUrl} 
-              alt={resource.title}
+              src={project.imageUrl} 
+              alt={project.title}
               className="w-full h-64 md:h-80 object-cover rounded-lg shadow-md"
             />
           </div>
         )}
 
-        {/* Resource Content */}
+        {/* Project Content */}
         <div className="max-w-4xl">
           <Card>
             <CardContent className="pt-6">
               <div className="prose prose-lg max-w-none">
-                <div className="whitespace-pre-wrap text-gray-800 leading-relaxed">
-                  {resource.content}
+                <div className="text-gray-800 leading-relaxed">
+                  <div className="mb-4 font-semibold">Technologies</div>
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech, i) => (
+                      <Badge key={i} variant="secondary" className="text-xs">{tech}</Badge>
+                    ))}
+                  </div>
                 </div>
               </div>
 
@@ -174,7 +176,7 @@ export default function ResourcePage() {
                   <div>
                     <h6 className="font-semibold text-primary mb-2">Pro Tip</h6>
                     <p className="text-gray-700 mb-0">
-                      Create a digital or physical binder to track completed maintenance tasks and store important warranty information and service records.
+                      Document your design decisions and keep iteration notes with each project milestone.
                     </p>
                   </div>
                 </div>
@@ -185,7 +187,7 @@ export default function ResourcePage() {
 
         {/* Updated Date */}
         <div className="mt-6 text-sm text-gray-500">
-          Last updated: {new Date(resource.updatedAt).toLocaleDateString()}
+          Last updated: {new Date(project.updatedAt).toLocaleDateString()}
         </div>
       </div>
       

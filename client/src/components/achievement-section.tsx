@@ -1,13 +1,10 @@
-import { useQuery } from "@tanstack/react-query";
+import achievementsData from "@/data/achievements.json";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Trophy, Award, Star, Calendar } from "lucide-react";
-import type { Achievement } from "@shared/schema";
 
 export default function AchievementSection() {
-  const { data: achievements = [], isLoading } = useQuery({
-    queryKey: ["/api/achievements"],
-  }) as { data: Achievement[]; isLoading: boolean };
+  const achievements = achievementsData;
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -27,25 +24,6 @@ export default function AchievementSection() {
     }
   };
 
-  if (isLoading) {
-    return (
-      <section id="achievements" className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-dark-text">
-            Achievements
-          </h2>
-          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
-            {Array.from({ length: 4 }).map((_, i) => (
-              <div key={i} className="animate-pulse">
-                <div className="h-32 bg-gray-200 rounded-lg"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    );
-  }
-
   return (
     <section id="achievements" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -55,7 +33,7 @@ export default function AchievementSection() {
         <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
           Recognition and accomplishments in competitions, exhibitions, and academic pursuits.
         </p>
-        
+
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
           {achievements.map((achievement) => {
             const IconComponent = getCategoryIcon(achievement.category);
@@ -68,11 +46,11 @@ export default function AchievementSection() {
                         <IconComponent className="h-6 w-6 text-white" />
                       </div>
                     </div>
-                    
+
                     <div className="flex-1">
                       <div className="flex items-start justify-between mb-3">
-                        <Badge 
-                          variant="outline" 
+                        <Badge
+                          variant="outline"
                           className={`text-xs ${getCategoryColor(achievement.category)}`}
                         >
                           {achievement.category.charAt(0).toUpperCase() + achievement.category.slice(1)}
@@ -84,11 +62,11 @@ export default function AchievementSection() {
                           </div>
                         )}
                       </div>
-                      
+
                       <h3 className="text-lg font-bold text-dark-text mb-2 leading-tight">
                         {achievement.title}
                       </h3>
-                      
+
                       <p className="text-gray-600 text-sm leading-relaxed">
                         {achievement.description}
                       </p>

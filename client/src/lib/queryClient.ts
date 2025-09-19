@@ -1,6 +1,38 @@
 import { QueryClient, QueryFunction } from "@tanstack/react-query";
 
-const API_BASE = import.meta.env.VITE_API_BASE || "/api";
+function normalizeApiBase(rawBase: string | undefined): string {
+  const defaultBase = "/api";
+  
+  // In development, always use "/api" to avoid CORS issues
+  if (import.meta.env.DEV) {
+    return defaultBase;
+  }
+  
+  if (!rawBase || !rawBase.trim()) return defaultBase;
+  let base = rawBase.trim();
+
+  // If given a same-origin base, prefer the default "/api" to avoid CORS
+  try {
+    const url = new URL(base, typeof window !== "undefined" ? window.location.origin : "http://localhost");
+    if (typeof window !== "undefined" && url.origin === window.location.origin) {
+      base = defaultBase;
+    } else {
+      // Ensure the path ends with /api
+      if (!url.pathname.endsWith("/api")) {
+        url.pathname = url.pathname.replace(/\/$/, "") + "/api";
+      }
+      base = url.toString().replace(/\/$/, "");
+    }
+  } catch {
+    // Treat as path; ensure it ends with /api
+    if (!base.endsWith("/api")) {
+      base = base.replace(/\/$/, "") + "/api";
+    }
+  }
+  return base;
+}
+
+const API_BASE = normalizeApiBase(import.meta.env.VITE_API_BASE as string | undefined);
 
 async function throwIfResNotOk(res: Response) {
   if (!res.ok) {

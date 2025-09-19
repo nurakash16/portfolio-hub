@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Frontend Developer",
+    "company": "TechSoft Ltd.",
+    "description": "Developed responsive user interfaces and dashboards using React, TypeScript, and Tailwind CSS.",
+    "technologies": ["React", "TypeScript", "TailwindCSS", "Vite"],
+    "duration": "Jan 2022 – Present",
+    "current": true,
+    "type": "work"
+  },
+  {
+    "id": 2,
+    "title": "Software Engineer Intern",
+    "company": "InnovateX",
+    "description": "Contributed to backend microservices and APIs with Node.js and PostgreSQL, improving system efficiency.",
+    "technologies": ["Node.js", "PostgreSQL", "Express", "Docker"],
+    "duration": "Jun 2021 – Dec 2021",
+    "current": false,
+    "type": "work"
+  },
+  {
+    "id": 3,
+    "title": "Computer Science Student",
+    "company": "ABC University",
+    "description": "Focused on algorithms, databases, and web application development through various academic projects.",
+    "technologies": ["C++", "Java", "SQL", "React"],
+    "duration": "2018 – 2022",
+    "current": false,
+    "type": "education"
+  }
+]

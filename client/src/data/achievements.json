@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "title": "Best Portfolio Award",
+      "year": "2025",
+      "category": "recognition",
+      "description": "Won recognition for creating the best personal portfolio website."
+    },
+    {
+      "id": 2,
+      "title": "Hackathon Champion",
+      "year": "2024",
+      "category": "competition",
+      "description": "Led a team to win first place in a national hackathon."
+    },
+    {
+      "id": 3,
+      "title": "Tech Expo Showcase",
+      "year": "2023",
+      "category": "exhibition",
+      "description": "Showcased innovative projects at the annual tech exhibition."
+    }
+  ]
+  
