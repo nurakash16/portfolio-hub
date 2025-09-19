@@ -7,10 +7,12 @@ export default defineConfig({
   base: "./",
   root: "client", // your source folder
   build: {
-    outDir: path.resolve(__dirname, "dist"),
-    emptyOutDir: true
+    outDir: path.resolve(__dirname, "client/dist"), // make sure this matches vercel.json
+    emptyOutDir: true,
+    rollupOptions: {
+      input: path.resolve(__dirname, "client/index.html"),
+    },
   },
-
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "client/src"),
