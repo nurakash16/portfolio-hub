@@ -11,10 +11,10 @@ export default defineConfig({
     }
   },
   build: {
-    outDir: path.resolve(__dirname, "client/dist"), // <-- put dist inside client
+    outDir: path.resolve(__dirname, "/dist"), // dist inside client
     emptyOutDir: true,
     rollupOptions: {
       input: path.resolve(__dirname, "client/index.html")
     }
-  }
+  }  
 });
