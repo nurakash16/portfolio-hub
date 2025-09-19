@@ -4,17 +4,12 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
-  root: "client",
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "client/src")
-    }
-  },
+  root: "client", // source code
   build: {
-    outDir: path.resolve(__dirname, "/dist"), // dist inside client
+    outDir: path.resolve(__dirname, "dist"), // output to root/dist
     emptyOutDir: true,
     rollupOptions: {
       input: path.resolve(__dirname, "client/index.html")
     }
-  }  
+  }
 });
