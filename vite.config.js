@@ -4,20 +4,20 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
-  base: "./", // relative paths
+  base: "./",
+  root: "client", // your source folder
+  build: {
+    outDir: "dist", // relative path only
+    emptyOutDir: true,
+    rollupOptions: {
+      input: "index.html",
+    },
+  },  
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "client/src"),
       "@shared": path.resolve(__dirname, "shared"),
       "@assets": path.resolve(__dirname, "attached_assets"),
-    },
-  },
-  root: path.resolve(__dirname, "client"), // source root
-  build: {
-    outDir: path.resolve(__dirname, "dist"), // <-- place dist at project root
-    emptyOutDir: true,
-    rollupOptions: {
-      input: path.resolve(__dirname, "client/index.html"), // ensure index.html in dist root
     },
   },
 });
