@@ -4,17 +4,12 @@
     {
       "src": "package.json",
       "use": "@vercel/static-build"
-    },
-    {
-      "src": "server/**/*.ts",
-      "use": "@vercel/node"
     }
   ],
+  "buildCommand": "npm install && npm run build",
+  "outputDirectory": "dist",
   "routes": [
-    { "src": "/api/(.*)", "dest": "/server/$1.ts" },
     { "src": "/(.*)", "dest": "/index.html" }
   ],
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
   "ignoreCommand": ""
 }
