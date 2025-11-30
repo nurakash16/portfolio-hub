@@ -6,7 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import ResourcePage from "@/pages/resource";
 import NotFound from "@/pages/not-found";
-import './index.css'; 
+import './index.css';
 
 
 function Router() {

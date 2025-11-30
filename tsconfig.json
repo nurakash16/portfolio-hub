@@ -8,11 +8,11 @@
     "module": "ESNext",
     "strict": true,
     "lib": ["esnext", "dom", "dom.iterable"],
-    "jsx": "react-jsx", // ✅ better for React 18+
+    "jsx": "react-jsx", 
     "esModuleInterop": true,
     "skipLibCheck": true,
     "allowImportingTsExtensions": true,
-    "resolveJsonModule": true, // ✅ enables importing JSON
+    "resolveJsonModule": true, 
     "moduleResolution": "Node",
     "baseUrl": ".",
     "types": ["node", "vite/client"],
