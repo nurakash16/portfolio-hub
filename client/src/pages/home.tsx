@@ -21,7 +21,7 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <ExperienceSection />
-      <ProjectSection searchQuery={searchQuery} />
+      <ProjectSection searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <ResearchSection />
       <AchievementSection />
       <ContactSection />

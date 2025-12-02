@@ -17,9 +17,18 @@ const categories: { value: Category; label: string }[] = [
   { value: "research", label: "Research" }
 ];
 
-export default function ProjectSection() {
+interface ProjectSectionProps {
+  searchQuery?: string;
+  setSearchQuery?: (query: string) => void;
+}
+
+export default function ProjectSection({ searchQuery: externalSearchQuery, setSearchQuery: externalSetSearchQuery }: ProjectSectionProps = {}) {
   const [selectedCategory, setSelectedCategory] = useState<Category>("all");
-  const [searchQuery, setSearchQuery] = useState("");
+  const [internalSearchQuery, setInternalSearchQuery] = useState("");
+
+  const isControlled = externalSearchQuery !== undefined && externalSetSearchQuery !== undefined;
+  const searchQuery = isControlled ? externalSearchQuery : internalSearchQuery;
+  const setSearchQuery = isControlled ? externalSetSearchQuery : setInternalSearchQuery;
 
   const filteredProjects = projects.filter((project) => {
     const matchesCategory =
@@ -70,8 +79,8 @@ export default function ProjectSection() {
                 key={cat.value}
                 onClick={() => setSelectedCategory(cat.value)}
                 className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === cat.value
-                    ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg scale-105"
-                    : "bg-white text-gray-600 hover:bg-gray-50 border border-gray-200 hover:border-blue-300"
+                  ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg scale-105"
+                  : "bg-white text-gray-600 hover:bg-gray-50 border border-gray-200 hover:border-blue-300"
                   }`}
               >
                 {cat.label}
