@@ -1,4 +1,4 @@
-import { User, Linkedin, Github, Facebook, Mail, MapPin, Phone } from "lucide-react";
+import { User, Linkedin, Github, Facebook, Mail, MapPin } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Footer() {
@@ -14,7 +14,7 @@ export default function Footer() {
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl"></div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
@@ -26,34 +26,34 @@ export default function Footer() {
               <span className="font-bold text-2xl gradient-text">NUR ALAM AKASH</span>
             </div>
             <p className="text-gray-300 mb-8 leading-relaxed text-lg max-w-md">
-              Electrical Engineer specializing in VLSI design, power systems, and control systems. Currently building the future of semiconductor technology.
+              Software Engineer focused on industrial dashboards and IoT/PLC integration, with a strong foundation in VLSI design and CMOS layout.
             </p>
             <div className="flex space-x-4">
-              <a 
-                href="https://www.linkedin.com/in/nur-alam-akash/" 
-                target="_blank" 
+              <a
+                href="https://www.linkedin.com/in/nur-alam-akash/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 pulse-glow"
               >
                 <Linkedin className="h-6 w-6 text-white" />
               </a>
-              <a 
-                href="https://github.com/nurakash16" 
-                target="_blank" 
+              <a
+                href="https://github.com/nurakash16"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 pulse-glow"
               >
                 <Github className="h-6 w-6 text-white" />
               </a>
-              <a 
-                href="https://www.facebook.com/nuralam.akash.3" 
-                target="_blank" 
+              <a
+                href="https://www.facebook.com/nuralam.akash.3"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 pulse-glow"
               >
                 <Facebook className="h-6 w-6 text-white" />
               </a>
-              <a 
+              <a
                 href="mailto:nurakash16@gmail.com"
                 className="w-12 h-12 bg-gradient-to-br from-red-500 to-pink-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 pulse-glow"
               >
@@ -67,7 +67,7 @@ export default function Footer() {
             <h6 className="font-semibold mb-6 text-lg text-gray-200">Navigation</h6>
             <ul className="space-y-3">
               <li>
-                <button 
+                <button
                   onClick={() => scrollToSection("about")}
                   className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer hover:translate-x-1 duration-200"
                 >
@@ -75,7 +75,7 @@ export default function Footer() {
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   onClick={() => scrollToSection("experience")}
                   className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer hover:translate-x-1 duration-200"
                 >
@@ -83,7 +83,15 @@ export default function Footer() {
                 </button>
               </li>
               <li>
-                <button 
+                <button
+                  onClick={() => scrollToSection("education")}
+                  className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer hover:translate-x-1 duration-200"
+                >
+                  Education
+                </button>
+              </li>
+              <li>
+                <button
                   onClick={() => scrollToSection("projects")}
                   className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer hover:translate-x-1 duration-200"
                 >
@@ -91,7 +99,7 @@ export default function Footer() {
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   onClick={() => scrollToSection("contact")}
                   className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer hover:translate-x-1 duration-200"
                 >
@@ -107,23 +115,23 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center">
                 <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                <span className="text-gray-400">VLSI Design</span>
+                <span className="text-gray-400">Angular + TypeScript</span>
               </li>
               <li className="flex items-center">
                 <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
-                <span className="text-gray-400">IC Layout Design</span>
+                <span className="text-gray-400">Industrial Dashboards</span>
               </li>
               <li className="flex items-center">
                 <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
-                <span className="text-gray-400">Power Systems</span>
+                <span className="text-gray-400">VLSI Design</span>
               </li>
               <li className="flex items-center">
                 <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></div>
-                <span className="text-gray-400">Control Systems</span>
+                <span className="text-gray-400">Cadence Virtuoso</span>
               </li>
               <li className="flex items-center">
                 <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
-                <span className="text-gray-400">Cadence Virtuoso</span>
+                <span className="text-gray-400">Node-RED / IoT</span>
               </li>
             </ul>
           </div>
@@ -136,7 +144,7 @@ export default function Footer() {
                 <Mail className="h-4 w-4 mt-1 text-gray-400" />
                 <div>
                   <p className="text-gray-300 text-sm">Email</p>
-                  <a 
+                  <a
                     href="mailto:nurakash16@gmail.com"
                     className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
@@ -152,11 +160,11 @@ export default function Footer() {
                 </div>
               </li>
               <li>
-                <button 
+                <button
                   onClick={() => scrollToSection("contact")}
                   className="text-primary hover:text-blue-300 transition-colors cursor-pointer text-sm"
                 >
-                  Contact Me →
+                  Contact Me
                 </button>
               </li>
             </ul>

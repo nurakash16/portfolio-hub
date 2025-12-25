@@ -1,31 +1,80 @@
 [
   {
     "id": 1,
-    "title": "Frontend Developer",
-    "company": "TechSoft Ltd.",
-    "description": "Developed responsive user interfaces and dashboards using React, TypeScript, and Tailwind CSS.",
-    "technologies": ["React", "TypeScript", "TailwindCSS", "Vite"],
-    "duration": "Jan 2022 – Present",
+    "title": "Software Engineer",
+    "company": "Sincos Group",
+    "description": "Develop industrial dashboards and UI for monitoring and reporting using Angular and TypeScript. Build IoT/PLC integrations and improve responsiveness, navigation flow, and multilingual support across CMMP, EMS, and FMS platforms.",
+    "highlights": [
+      "Developed industrial dashboards using Angular, TypeScript, JavaScript, HTML, and Tailwind CSS for monitoring and reporting",
+      "Developed the full Angular Gateway project for communication and control of IoT and PLC devices",
+      "Contributed to systems including CMMP (Compressor Monitoring), Energy Meter, Flow Meter, Carbon Emission, and Generator Efficiency dashboards",
+      "Enhanced UI responsiveness, layout consistency, and navigation flow across CMMP, EMS, and FMS platforms",
+      "Collaborated with iCenter modules to integrate data and enhance dashboard interactions",
+      "Built a custom Markdown editor enabling rich-text formatting and smooth content handling",
+      "Worked with Node-RED for device data flows and gained basic knowledge of REST API integration for IoT/PLC communication",
+      "Designed multi-screen enterprise dashboards for Unilever, focusing on clear data visualization and user-friendly interaction",
+      "Added multilingual support (Bangla and French) to enhance accessibility and client deployment flexibility",
+      "Provided support at Savar Continental by assessing workflows and Production Evaluating System (PES) operations, improving dashboards/software and conducting user training"
+    ],
+    "showcaseLabel": "Key Systems",
+    "showcaseItems": [
+      "CMMP (Compressor Monitoring)",
+      "Energy Meter",
+      "Flow Meter",
+      "Carbon Emission",
+      "Generator Efficiency",
+      "PES (Production Evaluating System)"
+    ],
+    "technologies": ["Angular", "TypeScript", "JavaScript", "Tailwind CSS", "Node-RED", "REST APIs"],
+    "duration": "Dec 2024 - Present",
     "current": true,
     "type": "work"
   },
   {
     "id": 2,
-    "title": "Software Engineer Intern",
-    "company": "InnovateX",
-    "description": "Contributed to backend microservices and APIs with Node.js and PostgreSQL, improving system efficiency.",
-    "technologies": ["Node.js", "PostgreSQL", "Express", "Docker"],
-    "duration": "Jun 2021 – Dec 2021",
+    "title": "Chip Designer",
+    "company": "Nokshasemi",
+    "description": "Designed CMOS circuits and custom layouts (65nm) and performed DRC/LVS verification in Cadence Virtuoso/Assura. Conducted device sizing, timing analysis, and parasitic and signal integrity checks.",
+    "highlights": [
+      "Learned CMOS fundamentals, circuit design, schematic development, and layout techniques",
+      "Gained hands-on experience with Cadence Virtuoso and Assura",
+      "Developed skills in device sizing, timing analysis, parasitic effects, and signal integrity",
+      "Worked on practice projects aligned with industrial chip design workflows",
+      "Created stick diagrams and validated circuits with functional simulations",
+      "Designed layouts following 65nm CMOS rules and achieved DRC-clean and LVS-clean results",
+      "Designed and simulated 21-stage ring oscillator, frequency divider, counter, register, buffer circuits, resettable D flip-flop (DTC logic), and 65nm CMOS operational amplifier"
+    ],
+    "showcaseLabel": "Notable Designs",
+    "showcaseItems": [
+      "21-Stage Ring Oscillator",
+      "Frequency Divider",
+      "Counter and Register blocks",
+      "Buffer circuits",
+      "Resettable D Flip-Flop (DTC logic)",
+      "65nm CMOS Operational Amplifier"
+    ],
+    "technologies": ["CMOS Design", "Cadence Virtuoso", "Assura", "DRC/LVS", "Layout"],
+    "duration": "Mar 2023 - Nov 2024",
     "current": false,
     "type": "work"
   },
   {
     "id": 3,
-    "title": "Computer Science Student",
-    "company": "ABC University",
-    "description": "Focused on algorithms, databases, and web application development through various academic projects.",
-    "technologies": ["C++", "Java", "SQL", "React"],
-    "duration": "2018 – 2022",
+    "title": "BSc in Electrical and Electronics Engineering",
+    "company": "Ahsanullah University of Science and Technology",
+    "description": "CGPA 3.24.",
+    "technologies": ["EEE", "Semiconductor", "VLSI"],
+    "duration": "Mar 2018 - Nov 2022",
+    "current": false,
+    "type": "education"
+  },
+  {
+    "id": 4,
+    "title": "Higher Secondary Certificate (Science)",
+    "company": "Dhaka City College",
+    "description": "CGPA 5.00.",
+    "technologies": ["Science"],
+    "duration": "Jun 2015 - Apr 2017",
     "current": false,
     "type": "education"
   }

@@ -1,4 +1,5 @@
 import { Github, Linkedin, Facebook } from "lucide-react";
+import heroImage from "@/assets/hero.jpg";
 
 export default function HeroSection() {
   return (
@@ -42,21 +43,21 @@ export default function HeroSection() {
 
             <div className="mb-6">
               <h2 className="text-2xl md:text-4xl font-light text-blue-100 mb-2">
-                Electrical Engineer
+                Software Engineer | VLSI Designer
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
             </div>
 
             <p className="text-xl md:text-2xl text-blue-50 leading-relaxed max-w-xl mb-8 font-light">
-              Specializing in <span className="text-cyan-300 font-medium">VLSI design</span>,
-              <span className="text-yellow-300 font-medium"> power systems</span>, and
-              <span className="text-green-300 font-medium"> control systems</span>.
-              Experienced in IC layout design with expertise in Cadence tools and analog circuit design.
+              Building <span className="text-cyan-300 font-medium">industrial dashboards</span> and
+              <span className="text-yellow-300 font-medium"> software systems</span> with Angular and TypeScript,
+              while maintaining strong expertise in
+              <span className="text-green-300 font-medium"> VLSI design</span> and CMOS layout.
             </p>
 
             {/* Expertise Tags */}
             <div className="flex flex-wrap gap-3 mb-12">
-              {['VLSI Design', 'IC Layout', 'Power Systems', 'Cadence Virtuoso', 'Control Systems'].map((skill, index) => (
+              {["Angular", "TypeScript", "VLSI Design", "Cadence Virtuoso", "Node-RED"].map((skill, index) => (
                 <span
                   key={index}
                   className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm text-white hover:bg-white/20 transition-all duration-300"
@@ -100,8 +101,11 @@ export default function HeroSection() {
             <div className="relative w-64 h-64 md:w-80 md:h-80">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full blur-2xl opacity-50 animate-pulse"></div>
               <div className="relative w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-6xl font-bold text-white shadow-2xl border-4 border-white/20 overflow-hidden">
-                {/* Placeholder for user image - replace with <img src="..." /> when available */}
-                NA
+                <img
+                  src={heroImage}
+                  alt="Md. Nur Alam Akash portrait"
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Decorative Elements around image */}

@@ -25,9 +25,8 @@ export default function ResearchSection() {
                             <div className="flex-1">
                                 <div className="flex items-center gap-3 mb-3">
                                     <span className="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider rounded-full">
-                                        Article
+                                        Research Article
                                     </span>
-                                    <span className="text-gray-500 text-sm font-medium">Published in IOP Science</span>
                                 </div>
 
                                 <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4 leading-tight group-hover:text-blue-600 transition-colors">
@@ -35,7 +34,8 @@ export default function ResearchSection() {
                                 </h3>
 
                                 <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                                    This research presents a novel biosensor design utilizing one-dimensional photonic crystals for the efficient detection of waterborne bacteria. The study explores the sensitivity and performance characteristics of the proposed sensor structure.
+                                    Research on a high-performance biosensor design for waterborne bacteria detection
+                                    based on one-dimensional photonic crystals.
                                 </p>
 
                                 <a

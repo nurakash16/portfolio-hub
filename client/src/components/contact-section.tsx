@@ -1,6 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Mail, Linkedin, Github, Facebook, MapPin, Phone } from "lucide-react";
+import { Mail, Linkedin, Github, Facebook, MapPin } from "lucide-react";
 
 export default function ContactSection() {
   const contactInfo = [
@@ -48,7 +46,7 @@ export default function ContactSection() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-6"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Ready to bring innovative electrical engineering solutions to life? Let's discuss your next project
+            Ready to build reliable industrial software or VLSI solutions? Let's discuss your next project.
           </p>
         </div>
         
@@ -62,7 +60,7 @@ export default function ContactSection() {
                   const IconComponent = contact.icon;
                   const gradients: Record<string, string> = {
                     "Email": "from-red-500 to-pink-500",
-                    "LinkedIn": "from-blue-600 to-blue-700", 
+                    "LinkedIn": "from-blue-600 to-blue-700",
                     "GitHub": "from-gray-700 to-gray-800",
                     "Facebook": "from-blue-600 to-blue-800"
                   };
@@ -109,7 +107,9 @@ export default function ContactSection() {
                   </div>
                   
                   <div className="flex items-start gap-3">
-                    <Phone className="h-5 w-5 text-blue-600 mt-1" />
+                    <div className="h-5 w-5 text-blue-600 mt-1 flex items-center justify-center">
+                      <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
+                    </div>
                     <div>
                       <h5 className="font-semibold text-gray-800">Availability</h5>
                       <p className="text-gray-600 text-sm">Open to full-time and project-based work</p>
@@ -121,7 +121,7 @@ export default function ContactSection() {
               {/* Professional Summary */}
               <div className="modern-card p-6">
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  Currently working as an IC Layout Design Engineer with expertise in VLSI design, power systems, and embedded applications. Always excited to discuss innovative projects and technical challenges.
+                  Software Engineer at Sincos Group building industrial dashboards and IoT/PLC integrations, with a strong foundation in VLSI design and CMOS layout. Always excited to discuss innovative projects and technical challenges.
                 </p>
                 
                 <div className="space-y-3">

@@ -1,10 +1,17 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Building, Calendar } from "lucide-react";
-import experiences from "@/data/experiences.json"; // ✅ import static JSON
+import { useState } from "react";
+import { Building, Calendar, ChevronDown } from "lucide-react";
+import experiences from "@/data/experiences.json";
 import type { Experience } from "@shared/schema";
 
+type ExperienceDetails = Experience & {
+  highlights?: string[];
+  showcaseLabel?: string;
+  showcaseItems?: string[];
+};
+
 export default function ExperienceSection() {
-  const data = experiences as Experience[];
+  const data = (experiences as ExperienceDetails[]).filter((item) => item.type === "work");
+  const [expandedId, setExpandedId] = useState<number | null>(null);
 
   return (
     <section
@@ -22,8 +29,7 @@ export default function ExperienceSection() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
           <p className="text-lg text-gray-600 mt-6 max-w-2xl mx-auto">
-            Building the future of semiconductor technology through innovative
-            design and engineering excellence
+            Blending industrial software development with VLSI design and layout experience
           </p>
         </div>
 
@@ -35,7 +41,11 @@ export default function ExperienceSection() {
                 <div className="absolute left-8 top-20 w-0.5 h-40 bg-gradient-to-b from-blue-400 to-purple-400 hidden md:block"></div>
               )}
 
-              <div className="modern-card p-8 relative">
+              <div
+                className="modern-card p-8 relative"
+                onMouseEnter={() => setExpandedId(experience.id)}
+                onMouseLeave={() => setExpandedId(null)}
+              >
                 {/* Timeline Dot */}
                 <div className="absolute -left-4 top-8 w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full border-4 border-white shadow-lg hidden md:block pulse-glow"></div>
 
@@ -55,9 +65,61 @@ export default function ExperienceSection() {
                       </div>
                     </div>
 
-                    <p className="text-gray-700 mb-6 leading-relaxed text-lg">
+                    <p className="text-gray-700 mb-4 leading-relaxed text-lg">
                       {experience.description}
                     </p>
+
+                    <button
+                      type="button"
+                      onClick={() => setExpandedId(expandedId === experience.id ? null : experience.id)}
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors"
+                      aria-expanded={expandedId === experience.id}
+                    >
+                      {expandedId === experience.id ? "Collapse details" : "Expand details"}
+                      <ChevronDown
+                        className={`h-4 w-4 transition-transform ${expandedId === experience.id ? "rotate-180" : ""}`}
+                      />
+                    </button>
+
+                    <div
+                      className={`transition-all duration-300 overflow-hidden ${
+                        expandedId === experience.id ? "max-h-[1200px] opacity-100 mt-6" : "max-h-0 opacity-0 mt-0"
+                      }`}
+                    >
+                      {experience.highlights && experience.highlights.length > 0 && (
+                        <div className="mb-6">
+                          <p className="text-sm font-semibold text-gray-700 uppercase tracking-wide mb-3">
+                            Highlights
+                          </p>
+                          <ul className="space-y-2 text-gray-700">
+                            {experience.highlights.map((item, itemIndex) => (
+                              <li key={itemIndex} className="flex items-start gap-3">
+                                <span className="mt-2 w-1.5 h-1.5 bg-blue-500 rounded-full flex-shrink-0"></span>
+                                <span className="leading-relaxed">{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+
+                      {experience.showcaseItems && experience.showcaseItems.length > 0 && (
+                        <div className="mb-6">
+                          <p className="text-sm font-semibold text-gray-700 uppercase tracking-wide mb-3">
+                            {experience.showcaseLabel || "Key Work"}
+                          </p>
+                          <div className="flex flex-wrap gap-2">
+                            {experience.showcaseItems.map((item, itemIndex) => (
+                              <span
+                                key={itemIndex}
+                                className="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-200"
+                              >
+                                {item}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
 
                     <div className="flex flex-wrap gap-2">
                       {experience.technologies.map((tech, techIndex) => (
@@ -84,8 +146,7 @@ export default function ExperienceSection() {
                         </div>
                       )}
                       <div className="mt-4 text-sm text-gray-500">
-                        {experience.type === "work" ? "💼" : "🎓"} Full-time
-                        Position
+                        {experience.type === "work" ? "Work Experience" : "Education"}
                       </div>
                     </div>
                   </div>

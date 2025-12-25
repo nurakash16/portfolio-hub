@@ -1,24 +1,23 @@
 [
-    {
-      "id": 1,
-      "title": "Best Portfolio Award",
-      "year": "2025",
-      "category": "recognition",
-      "description": "Won recognition for creating the best personal portfolio website."
-    },
-    {
-      "id": 2,
-      "title": "Hackathon Champion",
-      "year": "2024",
-      "category": "competition",
-      "description": "Led a team to win first place in a national hackathon."
-    },
-    {
-      "id": 3,
-      "title": "Tech Expo Showcase",
-      "year": "2023",
-      "category": "exhibition",
-      "description": "Showcased innovative projects at the annual tech exhibition."
-    }
-  ]
-  
+  {
+    "id": 1,
+    "title": "Runners-up, VLSI Hackathon (MindSparks)",
+    "year": "2022",
+    "category": "competition",
+    "description": "Achieved runners-up in MindSparks 2022, powered by Neural Semiconductor."
+  },
+  {
+    "id": 2,
+    "title": "Top 15 Finalist, VLSI Day Design Competition (UIU)",
+    "year": "2022",
+    "category": "competition",
+    "description": "Selected among the top 15 finalists at the VLSI Day 2022 design competition."
+  },
+  {
+    "id": 3,
+    "title": "FYDP Poster Exhibition - Top 10%",
+    "year": "2022",
+    "category": "recognition",
+    "description": "Final Year Design Project poster exhibition selection in the top 10%."
+  }
+]

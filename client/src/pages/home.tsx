@@ -2,6 +2,7 @@ import Navigation from "@/components/navigation";
 import HeroSection from "@/components/hero-section";
 import AboutSection from "@/components/about-section";
 import ExperienceSection from "@/components/experience-section";
+import EducationSection from "@/components/education-section";
 import ProjectSection from "@/components/project-section";
 import ResearchSection from "@/components/research-section";
 import AchievementSection from "@/components/achievement-section";
@@ -21,6 +22,7 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <ExperienceSection />
+      <EducationSection />
       <ProjectSection searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <ResearchSection />
       <AchievementSection />

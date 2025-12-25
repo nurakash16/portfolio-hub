@@ -6,15 +6,13 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Github, ExternalLink, Search, Code2, Zap, Cpu, Layers } from "lucide-react";
 
-type Category = "all" | "vlsi" | "power_systems" | "control_systems" | "embedded" | "research";
+type Category = "all" | "software" | "vlsi" | "embedded";
 
 const categories: { value: Category; label: string }[] = [
   { value: "all", label: "All Projects" },
+  { value: "software", label: "Software" },
   { value: "vlsi", label: "VLSI Design" },
-  { value: "power_systems", label: "Power Systems" },
-  { value: "control_systems", label: "Control Systems" },
-  { value: "embedded", label: "Embedded" },
-  { value: "research", label: "Research" }
+  { value: "embedded", label: "Embedded" }
 ];
 
 interface ProjectSectionProps {
@@ -108,11 +106,15 @@ export default function ProjectSection({ searchQuery: externalSearchQuery, setSe
                 {/* Card Header / Image Placeholder */}
                 <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden group-hover:from-blue-50 group-hover:to-purple-50 transition-colors duration-500">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    {project.category === 'vlsi' ? <Cpu className="w-16 h-16 text-gray-300 group-hover:text-blue-400 transition-colors duration-300" /> :
-                      project.category === 'power_systems' ? <Zap className="w-16 h-16 text-gray-300 group-hover:text-yellow-400 transition-colors duration-300" /> :
-                        project.category === 'embedded' ? <Code2 className="w-16 h-16 text-gray-300 group-hover:text-green-400 transition-colors duration-300" /> :
-                          <Layers className="w-16 h-16 text-gray-300 group-hover:text-purple-400 transition-colors duration-300" />
-                    }
+                    {project.category === "vlsi" ? (
+                      <Cpu className="w-16 h-16 text-gray-300 group-hover:text-blue-400 transition-colors duration-300" />
+                    ) : project.category === "software" ? (
+                      <Code2 className="w-16 h-16 text-gray-300 group-hover:text-green-400 transition-colors duration-300" />
+                    ) : project.category === "embedded" ? (
+                      <Zap className="w-16 h-16 text-gray-300 group-hover:text-yellow-400 transition-colors duration-300" />
+                    ) : (
+                      <Layers className="w-16 h-16 text-gray-300 group-hover:text-purple-400 transition-colors duration-300" />
+                    )}
                   </div>
 
                   {/* Overlay Actions */}

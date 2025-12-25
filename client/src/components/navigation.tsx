@@ -50,6 +50,12 @@ export default function Navigation({ searchQuery, setSearchQuery }: NavigationPr
               Experience
             </button>
             <button
+              onClick={() => scrollToSection("education")}
+              className="text-gray-700 hover:text-primary transition-colors cursor-pointer"
+            >
+              Education
+            </button>
+            <button
               onClick={() => scrollToSection("projects")}
               className="text-gray-700 hover:text-primary transition-colors cursor-pointer"
             >
@@ -134,6 +140,12 @@ export default function Navigation({ searchQuery, setSearchQuery }: NavigationPr
                 className="block text-gray-700 hover:text-primary transition-colors cursor-pointer py-2 text-left"
               >
                 Experience
+              </button>
+              <button
+                onClick={() => scrollToSection("education")}
+                className="block text-gray-700 hover:text-primary transition-colors cursor-pointer py-2 text-left"
+              >
+                Education
               </button>
               <button
                 onClick={() => scrollToSection("projects")}
