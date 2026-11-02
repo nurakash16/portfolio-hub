@@ -1,235 +1,131 @@
-import { User, Linkedin, Github, Facebook, Mail, MapPin, Phone } from "lucide-react";
-import { Link } from "wouter";
+import { Linkedin, Github, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const currentYear = new Date().getFullYear();
+
+  const navLinks = [
+    { href: "#experience", label: "Experience" },
+    { href: "#projects", label: "Projects" },
+    { href: "#now", label: "Now" },
+    { href: "#about", label: "Skills" },
+    { href: "#research", label: "Research" },
+    { href: "#achievements", label: "Achievements" },
+    { href: "#education", label: "Education" },
+    { href: "#contact", label: "Contact" }
+  ];
 
   return (
-    <footer className="relative bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 text-white py-16 overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl"></div>
-
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid md:grid-cols-4 gap-8">
-          {/* Brand */}
+    <footer className="bg-slate-950 text-slate-300 py-16 border-t border-slate-800">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <h2 className="sr-only">Footer</h2>
+        
+        <div className="grid md:grid-cols-4 gap-10 mb-12">
+          {/* Brand Column */}
           <div className="md:col-span-2">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center">
-                <User className="h-7 w-7 text-white" />
-              </div>
-              <span className="font-bold text-2xl gradient-text">NUR ALAM AKASH</span>
+            <div className="flex items-center gap-2.5 mb-4">
+              <span className="w-9 h-9 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-base">
+                A
+              </span>
+              <span className="font-bold text-xl text-white">Md. Nur Alam Akash</span>
             </div>
-            <p className="text-gray-300 mb-8 leading-relaxed text-lg max-w-md">
-              Software Engineer focused on industrial dashboards and IoT/PLC integration, with a strong foundation in VLSI design and CMOS layout.
+            <p className="text-slate-400 text-sm leading-relaxed max-w-md mb-6">
+              Software Engineer focused on industrial dashboards, IoT integration, and full-stack development with Angular, TypeScript, Node.js, and PostgreSQL.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex items-center gap-3">
               <a
                 href="https://www.linkedin.com/in/nur-alam-akash/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 pulse-glow"
+                aria-label="LinkedIn Profile"
+                className="w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 hover:border-blue-500 hover:text-white flex items-center justify-center transition-colors"
               >
-                <Linkedin className="h-6 w-6 text-white" />
+                <Linkedin className="h-4 w-4" />
               </a>
               <a
                 href="https://github.com/nurakash16"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 pulse-glow"
+                aria-label="GitHub Profile"
+                className="w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-500 hover:text-white flex items-center justify-center transition-colors"
               >
-                <Github className="h-6 w-6 text-white" />
-              </a>
-              <a
-                href="https://www.facebook.com/nuralam.akash.3"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 pulse-glow"
-              >
-                <Facebook className="h-6 w-6 text-white" />
+                <Github className="h-4 w-4" />
               </a>
               <a
                 href="mailto:nurakash16@gmail.com"
-                className="w-12 h-12 bg-gradient-to-br from-red-500 to-pink-500 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 pulse-glow"
+                aria-label="Send Email"
+                className="w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 hover:border-red-400 hover:text-white flex items-center justify-center transition-colors"
               >
-                <Mail className="h-6 w-6 text-white" />
+                <Mail className="h-4 w-4" />
               </a>
               <a
                 href="tel:+8801521515249"
-                title="+88015-21515249"
-                className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 pulse-glow"
+                aria-label="Phone Number"
+                className="w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 hover:border-emerald-500 hover:text-white flex items-center justify-center transition-colors"
               >
-                <Phone className="h-6 w-6 text-white" />
+                <Phone className="h-4 w-4" />
               </a>
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Navigation Links */}
           <div>
-            <h6 className="font-semibold mb-6 text-lg text-gray-200">Navigation</h6>
-            <ul className="space-y-3">
-              <li>
-                <button
-                  onClick={() => scrollToSection("about")}
-                  className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer hover:translate-x-1 duration-200"
-                >
-                  About Me
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("experience")}
-                  className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer hover:translate-x-1 duration-200"
-                >
-                  Experience
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("education")}
-                  className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer hover:translate-x-1 duration-200"
-                >
-                  Education
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("projects")}
-                  className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer hover:translate-x-1 duration-200"
-                >
-                  Projects
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("contact")}
-                  className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer hover:translate-x-1 duration-200"
-                >
-                  Contact
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("research")}
-                  className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer hover:translate-x-1 duration-200"
-                >
-                  Research
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("activities")}
-                  className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer hover:translate-x-1 duration-200"
-                >
-                  Activities
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("references")}
-                  className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer hover:translate-x-1 duration-200"
-                >
-                  References
-                </button>
-              </li>
+            <h3 className="font-semibold text-white text-sm uppercase tracking-wider mb-4">
+              Navigation
+            </h3>
+            <ul className="space-y-2.5 text-sm">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className="text-slate-400 hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Technical Expertise */}
+          {/* Quick Contact Info */}
           <div>
-            <h6 className="font-semibold mb-6 text-lg text-gray-200">Expertise</h6>
-            <ul className="space-y-3">
-              <li className="flex items-center">
-                <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                <span className="text-gray-400">Angular + TypeScript</span>
-              </li>
-              <li className="flex items-center">
-                <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
-                <span className="text-gray-400">Industrial Dashboards</span>
-              </li>
-              <li className="flex items-center">
-                <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
-                <span className="text-gray-400">VLSI Design</span>
-              </li>
-              <li className="flex items-center">
-                <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></div>
-                <span className="text-gray-400">Cadence Virtuoso</span>
-              </li>
-              <li className="flex items-center">
-                <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
-                <span className="text-gray-400">Node-RED / IoT</span>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h6 className="font-semibold mb-4">Get In Touch</h6>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-3">
-                <Mail className="h-4 w-4 mt-1 text-gray-400" />
-                <div>
-                  <p className="text-gray-300 text-sm">Email</p>
-                  <a
-                    href="mailto:nurakash16@gmail.com"
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
-                  >
-                    nurakash16@gmail.com
-                  </a>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <Phone className="h-4 w-4 mt-1 text-gray-400" />
-                <div>
-                  <p className="text-gray-300 text-sm">Phone</p>
-                  <a
-                    href="tel:+8801521515249"
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
-                  >
-                    +88015-21515249
-                  </a>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <MapPin className="h-4 w-4 mt-1 text-gray-400" />
-                <div>
-                  <p className="text-gray-300 text-sm">Available for</p>
-                  <p className="text-gray-400 text-sm">Remote & On-site work</p>
-                </div>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("contact")}
-                  className="text-primary hover:text-blue-300 transition-colors cursor-pointer text-sm"
+            <h3 className="font-semibold text-white text-sm uppercase tracking-wider mb-4">
+              Contact
+            </h3>
+            <ul className="space-y-3 text-sm">
+              <li className="flex items-start gap-2.5 text-slate-400">
+                <Mail className="w-4 h-4 text-slate-400 mt-0.5 flex-shrink-0" />
+                <a
+                  href="mailto:nurakash16@gmail.com"
+                  className="hover:text-white transition-colors"
                 >
-                  Contact Me
-                </button>
+                  nurakash16@gmail.com
+                </a>
+              </li>
+              <li className="flex items-start gap-2.5 text-slate-400">
+                <Phone className="w-4 h-4 text-slate-400 mt-0.5 flex-shrink-0" />
+                <a
+                  href="tel:+8801521515249"
+                  className="hover:text-white transition-colors"
+                >
+                  +88015-21515249
+                </a>
+              </li>
+              <li className="flex items-start gap-2.5 text-slate-400">
+                <MapPin className="w-4 h-4 text-slate-400 mt-0.5 flex-shrink-0" />
+                <span>Dhaka, Bangladesh</span>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="mt-12 pt-8 border-t border-gray-700/50">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center mb-4 md:mb-0">
-              <p className="text-gray-300 mr-4">
-                &copy; 2025 MD. Nur Alam Akash. All rights reserved.
-              </p>
-              <div className="hidden md:flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-green-400 text-sm">Available for Projects</span>
-              </div>
-            </div>
-            <p className="text-gray-400 text-sm">
-              Crafted with precision • Powered by innovation
-            </p>
-          </div>
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-400 gap-4">
+          <p>
+            &copy; {currentYear} Md. Nur Alam Akash. All rights reserved.
+          </p>
+          <p className="text-slate-400">
+            Open to full-time and project-based software engineering opportunities.
+          </p>
         </div>
       </div>
     </footer>

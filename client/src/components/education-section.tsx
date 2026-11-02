@@ -6,50 +6,41 @@ export default function EducationSection() {
   const education = (experiences as Experience[]).filter((item) => item.type === "education");
 
   return (
-    <section id="education" className="section-padding relative overflow-hidden bg-slate-50">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50/30 to-slate-100/60"></div>
-      <div className="absolute top-10 left-10 w-72 h-72 bg-blue-400/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-10 right-10 w-80 h-80 bg-purple-400/5 rounded-full blur-3xl"></div>
-
-      <div className="container mx-auto px-4 relative z-10">
+    <section id="education" className="py-20 bg-white border-t border-slate-200">
+      <div className="container mx-auto px-4 max-w-5xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-3 text-slate-900 tracking-tight">
             Education
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
-          <p className="text-lg text-gray-600 mt-6 max-w-2xl mx-auto">
-            Academic foundation in electrical and electronics engineering
+          <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full mb-4"></div>
+          <p className="text-slate-600 max-w-2xl mx-auto text-base">
+            Academic foundation in electrical, electronics, and semiconductor engineering.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="space-y-6">
           {education.map((item) => (
-            <div key={item.id} className="modern-card p-8">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                    {item.title}
-                  </h3>
-                  <div className="flex items-center text-gray-600 mb-3">
-                    <GraduationCap className="h-5 w-5 mr-2 text-blue-500" />
-                    <span className="font-semibold text-lg">{item.company}</span>
-                  </div>
-                  <p className="text-gray-700 leading-relaxed text-lg">
-                    {item.description}
-                  </p>
+            <div
+              key={item.id}
+              className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6"
+            >
+              <div>
+                <h3 className="text-xl font-bold text-slate-900 mb-1.5">
+                  {item.title}
+                </h3>
+                <div className="flex items-center text-slate-700 font-medium text-sm mb-3">
+                  <GraduationCap className="h-4 w-4 mr-2 text-blue-600 flex-shrink-0" />
+                  <span>{item.company}</span>
                 </div>
+                <p className="text-slate-600 text-sm font-medium">
+                  {item.description.replace(/\.$/, "")}
+                </p>
+              </div>
 
-                <div className="md:text-right">
-                  <div className="modern-card p-4 bg-gradient-to-br from-blue-50 to-purple-50 border-blue-200/50">
-                    <div className="flex items-center justify-start md:justify-end text-gray-600 mb-2">
-                      <Calendar className="h-4 w-4 mr-2" />
-                      <span className="font-medium">{item.duration}</span>
-                    </div>
-                    <div className="mt-2 text-sm text-gray-500">
-                      Education
-                    </div>
-                  </div>
+              <div className="sm:text-right flex-shrink-0">
+                <div className="inline-flex items-center text-slate-600 text-sm font-medium bg-slate-50 px-3.5 py-1.5 rounded-lg border border-slate-200">
+                  <Calendar className="h-4 w-4 mr-2 text-slate-500" />
+                  <span>{item.duration}</span>
                 </div>
               </div>
             </div>

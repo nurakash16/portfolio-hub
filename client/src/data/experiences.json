@@ -3,40 +3,51 @@
     "id": 1,
     "title": "Software Engineer",
     "company": "Sincos Group",
-    "description": "Develop industrial monitoring dashboards, IoT telemetry integrations, and maintenance management systems using Angular, TypeScript, Node.js, and PostgreSQL. Build IoT/PLC gateways, MQTT-to-ThingsBoard data flows, and enterprise client platforms for Unilever, LADWP, and Gaugap.",
+    "description": "Develop industrial monitoring and reporting dashboards using Angular, TypeScript, JavaScript, HTML, and Tailwind CSS. Build IoT telemetry pipelines, PLC gateways, and maintenance management platforms.",
+    "defaultHighlights": [
+      "Develop industrial monitoring and reporting dashboards using Angular, TypeScript, JavaScript, HTML, and Tailwind CSS.",
+      "Developed the full Angular Gateway application for communication and control of IoT and PLC devices.",
+      "Worked on MQTT-to-ThingsBoard data flows using Node-RED and REST APIs to ingest, retrieve and visualize real-time telemetry.",
+      "Worked with ThingsBoard assets, entities, devices, roles and permissions, and called its APIs from custom dashboards.",
+      "Contributed to the UI/UX upgrade of the Production Evaluating System (PES) dashboard frontend, redesigning layouts and fixing monitoring issues in collaboration with the team.",
+      "Contributed to the Maintenance Management System across UI design, Angular frontend, API integration, and database design."
+    ],
+    "moreHighlights": [
+      "Contributed to dashboards for CMMP (Compressor Monitoring), Energy Meter, Flow Meter, Carbon Emission, and Generator Efficiency systems.",
+      "Improved UI responsiveness, layout consistency and navigation flow across the CMMP, EMS and FMS platforms.",
+      "Designed multi-screen enterprise dashboards for a global consumer-goods client.",
+      "Worked on dashboards for the LADWP project; developed dashboards for the Gaugap agritech project.",
+      "Researched competitor CMMS platforms (ClickMaint) to guide UX and feature improvements.",
+      "Collaborated with iCenter modules to integrate data and enhance dashboard interactions.",
+      "Built a custom Markdown editor with rich-text formatting.",
+      "Added multilingual support (Bangla and French).",
+      "Supported operations at a manufacturing client by assessing workflows, improving dashboards and software, and conducting user training."
+    ],
     "highlights": [
-      "Developed industrial dashboards using Angular, TypeScript, JavaScript, HTML, and Tailwind CSS for monitoring and reporting",
-      "Developed the full Angular Gateway project for communication and control of IoT and PLC devices",
-      "Contributed to systems including CMMP (Compressor Monitoring), Energy Meter, Flow Meter, Carbon Emission, and Generator Efficiency dashboards",
-      "Enhanced UI responsiveness, layout consistency, and navigation flow across CMMP, EMS, and FMS platforms",
-      "Collaborated with iCenter modules to integrate data and enhance dashboard interactions",
-      "Built a custom Markdown editor enabling rich-text formatting and smooth content handling",
-      "Worked with Node-RED for device data flows and gained basic knowledge of REST API integration for IoT/PLC communication",
-      "Designed multi-screen enterprise dashboards for Unilever, focusing on clear data visualization and user-friendly interaction",
-      "Added multilingual support (Bangla and French) to enhance accessibility and client deployment flexibility",
-      "Provided support at Savar Continental by assessing workflows and Production Evaluating System (PES) operations, improving dashboards/software and conducting user training",
-      "Contributed to the UI/UX upgrade of the Production Evaluating System (PES) dashboard frontend, redesigning layouts and fixing monitoring issues in collaboration with the team",
-      "Worked on enterprise dashboards for the LADWP project",
-      "Developed dashboards for the Gaugap agritech project and worked with the data path from MQTT to ThingsBoard",
-      "Worked on MQTT-to-ThingsBoard data flows, using Node-RED and REST APIs to ingest, retrieve, and visualize real-time telemetry",
-      "Worked with ThingsBoard assets, entities, devices, roles, and permissions, and called its APIs from custom dashboards",
-      "Contributed to the Maintenance Management System across UI design, Angular frontend, API integration, and database design",
-      "Researched competitor CMMS platforms (ClickMaint) and documented findings to guide feature and UX improvements"
+      "Develop industrial monitoring and reporting dashboards using Angular, TypeScript, JavaScript, HTML, and Tailwind CSS.",
+      "Developed the full Angular Gateway application for communication and control of IoT and PLC devices.",
+      "Worked on MQTT-to-ThingsBoard data flows using Node-RED and REST APIs to ingest, retrieve and visualize real-time telemetry.",
+      "Worked with ThingsBoard assets, entities, devices, roles and permissions, and called its APIs from custom dashboards.",
+      "Contributed to the UI/UX upgrade of the Production Evaluating System (PES) dashboard frontend, redesigning layouts and fixing monitoring issues in collaboration with the team.",
+      "Contributed to the Maintenance Management System across UI design, Angular frontend, API integration, and database design.",
+      "Contributed to dashboards for CMMP (Compressor Monitoring), Energy Meter, Flow Meter, Carbon Emission, and Generator Efficiency systems.",
+      "Improved UI responsiveness, layout consistency and navigation flow across the CMMP, EMS and FMS platforms.",
+      "Designed multi-screen enterprise dashboards for a global consumer-goods client.",
+      "Worked on dashboards for the LADWP project; developed dashboards for the Gaugap agritech project.",
+      "Researched competitor CMMS platforms (ClickMaint) to guide UX and feature improvements.",
+      "Collaborated with iCenter modules to integrate data and enhance dashboard interactions.",
+      "Built a custom Markdown editor with rich-text formatting.",
+      "Added multilingual support (Bangla and French).",
+      "Supported operations at a manufacturing client by assessing workflows, improving dashboards and software, and conducting user training."
     ],
     "showcaseLabel": "Key Systems",
     "showcaseItems": [
-      "CMMP (Compressor Monitoring)",
-      "Energy Meter",
-      "Flow Meter",
-      "Carbon Emission",
-      "Generator Efficiency",
-      "PES (Production Evaluating System)",
-      "LADWP Project",
-      "Gaugap Agritech",
-      "Angular IoT Gateway",
+      "Angular Gateway",
+      "ThingsBoard & MQTT",
+      "PES Dashboard",
+      "CMMP System",
       "Maintenance Management System (CMMS)",
-      "ThingsBoard & MQTT Telemetry",
-      "ClickMaint UX Research"
+      "LADWP Dashboards"
     ],
     "technologies": [
       "Angular",
@@ -44,14 +55,11 @@
       "JavaScript",
       "Tailwind CSS",
       "Node-RED",
-      "REST APIs",
-      "Node.js",
-      "PostgreSQL",
-      "ThingsBoard",
       "MQTT",
-      "Figma"
+      "ThingsBoard",
+      "REST APIs"
     ],
-    "duration": "Dec 2024 - Present",
+    "duration": "Feb 2025 - Present",
     "current": true,
     "type": "work"
   },
@@ -59,26 +67,23 @@
     "id": 2,
     "title": "Chip Designer (Trainee)",
     "company": "Nokshasemi",
-    "description": "Designed CMOS circuits and custom layouts (65nm) and performed DRC/LVS verification in Cadence Virtuoso/Assura. Conducted device sizing, timing analysis, and parasitic and signal integrity checks.",
-    "highlights": [
-      "Learned CMOS fundamentals, circuit design, schematic development, and layout techniques",
-      "Gained hands-on experience with Cadence Virtuoso and Assura",
-      "Developed skills in device sizing, timing analysis, parasitic effects, and signal integrity",
-      "Worked on practice projects aligned with industrial chip design workflows",
-      "Created stick diagrams and validated circuits with functional simulations",
-      "Designed layouts following 65nm CMOS rules and achieved DRC-clean and LVS-clean results",
-      "Designed and simulated 21-stage ring oscillator, frequency divider, counter, register, buffer circuits, resettable D flip-flop (DTC logic), and 65nm CMOS operational amplifier",
-      "Completed an industrial training program in CMOS circuit design, schematic development, and layout using Cadence Virtuoso and Assura",
-      "Applied timing analysis, parasitic analysis, and signal integrity checks to validate designs against rule-based specifications"
+    "description": "Completed an industrial training program in CMOS circuit design, schematic development, and layout using Cadence Virtuoso and Assura.",
+    "defaultHighlights": [
+      "Completed an industrial training program in CMOS circuit design, schematic development, and layout using Cadence Virtuoso and Assura.",
+      "Designed and verified 65nm CMOS circuits (ring oscillator, frequency divider, counter, flip-flop, op-amp), achieving DRC-clean and LVS-clean layouts through systematic debugging and simulation.",
+      "Applied timing analysis, parasitic analysis, and signal integrity checks to validate designs against rule-based specifications."
     ],
-    "showcaseLabel": "Notable Designs",
+    "highlights": [
+      "Completed an industrial training program in CMOS circuit design, schematic development, and layout using Cadence Virtuoso and Assura.",
+      "Designed and verified 65nm CMOS circuits (ring oscillator, frequency divider, counter, flip-flop, op-amp), achieving DRC-clean and LVS-clean layouts through systematic debugging and simulation.",
+      "Applied timing analysis, parasitic analysis, and signal integrity checks to validate designs against rule-based specifications."
+    ],
+    "showcaseLabel": "Notable Work",
     "showcaseItems": [
-      "21-Stage Ring Oscillator",
-      "Frequency Divider",
-      "Counter and Register blocks",
-      "Buffer circuits",
-      "Resettable D Flip-Flop (DTC logic)",
-      "65nm CMOS Operational Amplifier"
+      "65nm CMOS Circuits",
+      "Ring Oscillator & Dividers",
+      "Op-Amp Layout",
+      "DRC/LVS Clean"
     ],
     "technologies": [
       "CMOS Design",
@@ -87,7 +92,7 @@
       "DRC/LVS",
       "Layout"
     ],
-    "duration": "Mar 2023 - Nov 2024",
+    "duration": "Nov 2023 - Nov 2024",
     "current": false,
     "type": "work"
   },
@@ -95,7 +100,7 @@
     "id": 3,
     "title": "BSc in Electrical and Electronics Engineering",
     "company": "Ahsanullah University of Science and Technology",
-    "description": "CGPA 3.24.",
+    "description": "CGPA 3.24",
     "technologies": [
       "EEE",
       "Semiconductor",
@@ -109,7 +114,7 @@
     "id": 4,
     "title": "Higher Secondary Certificate (Science)",
     "company": "Dhaka City College",
-    "description": "CGPA 5.00.",
+    "description": "CGPA 5.00",
     "technologies": [
       "Science"
     ],

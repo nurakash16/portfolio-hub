@@ -2,16 +2,10 @@
   {
     "id": 1,
     "title": "Real-Time Chat Application",
-    "description": "Chat app with a React web version, built on Firebase and WebRTC. Supports text, emoji, voice messages, image, audio and document sharing, and voice and video calls.",
+    "description": "Chat app with a React web version, built on Firebase and WebRTC. Text, emoji, voice messages, image, audio and document sharing, and voice and video calls.",
     "category": "software",
-    "technologies": [
-      "React",
-      "Firebase",
-      "WebRTC",
-      "TypeScript",
-      "Notifications"
-    ],
-    "year": "Personal",
+    "technologies": ["React", "Firebase", "WebRTC"],
+    "year": "Web App",
     "imageUrl": "",
     "githubUrl": "",
     "demoUrl": "https://hellosam.vercel.app/",
@@ -22,37 +16,11 @@
   },
   {
     "id": 2,
-    "title": "Portfolio Website (TypeScript)",
-    "description": "Personal portfolio site built with modular UI components.",
+    "title": "Finance Tracker",
+    "description": "Full-stack finance app with real-time data visualization.",
     "category": "software",
-    "technologies": [
-      "TypeScript",
-      "UI Components",
-      "Responsive UI"
-    ],
-    "year": "Personal",
-    "imageUrl": "",
-    "githubUrl": "",
-    "demoUrl": "https://nuralamakash.vercel.app/",
-    "status": "Completed",
-    "skillLevel": "intermediate",
-    "readingTime": 6,
-    "updatedAt": "2024-12-01"
-  },
-  {
-    "id": 3,
-    "title": "Full-Stack Finance Tracker",
-    "description": "Full-stack finance app (Angular, Node.js, PostgreSQL) with data visualization and an AI assistant that answers questions about spending. Runs with Docker Compose.",
-    "category": "software",
-    "technologies": [
-      "Angular",
-      "Node.js",
-      "PostgreSQL",
-      "Docker Compose",
-      "AI Assistant",
-      "Data Visualization"
-    ],
-    "year": "Personal",
+    "technologies": ["Angular", "Node.js", "PostgreSQL"],
+    "year": "Web App",
     "imageUrl": "",
     "githubUrl": "",
     "demoUrl": "https://exintrack.vercel.app/",
@@ -62,15 +30,26 @@
     "updatedAt": "2024-12-01"
   },
   {
-    "id": 4,
-    "title": "Graduate Records System (Full-Stack)",
-    "description": "Application for managing and displaying graduate information.",
+    "id": 3,
+    "title": "IELTS Practice Platform",
+    "description": "Free full-length mock exam website that simulates the real test format.",
     "category": "software",
-    "technologies": [
-      "Full-Stack",
-      "Database",
-      "CRUD"
-    ],
+    "technologies": ["Web Development", "Mock Exam Simulation", "TypeScript"],
+    "year": "Web Platform",
+    "imageUrl": "",
+    "githubUrl": "",
+    "demoUrl": "",
+    "status": "Completed",
+    "skillLevel": "intermediate",
+    "readingTime": 8,
+    "updatedAt": "2025-01-15"
+  },
+  {
+    "id": 4,
+    "title": "Graduate Records System",
+    "description": "Full-stack application for managing and displaying graduate information.",
+    "category": "software",
+    "technologies": ["Full-Stack", "Database", "CRUD"],
     "year": "Academic",
     "imageUrl": "",
     "githubUrl": "",
@@ -82,15 +61,25 @@
   },
   {
     "id": 5,
+    "title": "ISP Movie Streaming Website",
+    "description": "Streaming platform built for a local internet service provider.",
+    "category": "software",
+    "technologies": ["Full-Stack", "Video Streaming", "REST APIs"],
+    "year": "Client Project",
+    "imageUrl": "",
+    "githubUrl": "private",
+    "demoUrl": "",
+    "status": "Completed",
+    "skillLevel": "intermediate",
+    "readingTime": 9,
+    "updatedAt": "2025-01-15"
+  },
+  {
+    "id": 6,
     "title": "16-bit Single Cycle MIPS Processor",
     "description": "VLSI project focused on placement and routing of a single-cycle MIPS processor.",
-    "category": "vlsi",
-    "technologies": [
-      "CMOS",
-      "Placement & Routing",
-      "Cadence",
-      "Layout"
-    ],
+    "category": "engineering",
+    "technologies": ["CMOS", "Placement & Routing", "Cadence", "Layout"],
     "year": "Academic",
     "imageUrl": "",
     "githubUrl": "",
@@ -101,15 +90,11 @@
     "updatedAt": "2024-12-01"
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "4-bit Ripple Carry Adder",
     "description": "Schematic and layout design for a 4-bit ripple carry adder.",
-    "category": "vlsi",
-    "technologies": [
-      "CMOS",
-      "Schematic",
-      "Layout"
-    ],
+    "category": "engineering",
+    "technologies": ["CMOS", "Schematic", "Layout"],
     "year": "Academic",
     "imageUrl": "",
     "githubUrl": "",
@@ -120,15 +105,11 @@
     "updatedAt": "2024-12-01"
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "Low-Power Flip-Flop",
     "description": "Low-power flip-flop using a static latch and dynamic pulse generator.",
-    "category": "vlsi",
-    "technologies": [
-      "CMOS",
-      "Low Power",
-      "Circuit Design"
-    ],
+    "category": "engineering",
+    "technologies": ["CMOS", "Low Power", "Circuit Design"],
     "year": "Academic",
     "imageUrl": "",
     "githubUrl": "",
@@ -139,33 +120,11 @@
     "updatedAt": "2024-12-01"
   },
   {
-    "id": 8,
+    "id": 9,
     "title": "Solar-Based Traffic Light System",
     "description": "Solar-powered traffic light system using Arduino and LDR.",
-    "category": "embedded",
-    "technologies": [
-      "Arduino",
-      "LDR",
-      "Power Control"
-    ],
-    "year": "Academic",
-    "imageUrl": "",
-    "githubUrl": "",
-    "demoUrl": "",
-    "status": "Completed",
-    "skillLevel": "intermediate",
-    "readingTime": 7,
-    "updatedAt": "2024-12-01"
-  },
-  {
-    "id": 9,
-    "title": "Blind Assistance System",
-    "description": "Assistive system using ultrasonic sensors for obstacle detection.",
-    "category": "embedded",
-    "technologies": [
-      "Arduino",
-      "Ultrasonic Sensors"
-    ],
+    "category": "engineering",
+    "technologies": ["Arduino", "LDR", "Power Control"],
     "year": "Academic",
     "imageUrl": "",
     "githubUrl": "",
@@ -177,14 +136,10 @@
   },
   {
     "id": 10,
-    "title": "AC Fan Speed Controller",
-    "description": "AC fan speed controller using Arduino and TRIAC.",
-    "category": "embedded",
-    "technologies": [
-      "Arduino",
-      "TRIAC",
-      "Power Electronics"
-    ],
+    "title": "Blind Assistance System",
+    "description": "Assistive system using ultrasonic sensors for obstacle detection.",
+    "category": "engineering",
+    "technologies": ["Arduino", "Ultrasonic Sensors"],
     "year": "Academic",
     "imageUrl": "",
     "githubUrl": "",
@@ -196,14 +151,10 @@
   },
   {
     "id": 11,
-    "title": "Wireless DC Motor Speed Control",
-    "description": "DC motor speed control using IR remote and 555 timer.",
-    "category": "embedded",
-    "technologies": [
-      "IR Remote",
-      "555 Timer",
-      "Motor Control"
-    ],
+    "title": "AC Fan Speed Controller",
+    "description": "AC fan speed controller using Arduino and TRIAC.",
+    "category": "engineering",
+    "technologies": ["Arduino", "TRIAC", "Power Electronics"],
     "year": "Academic",
     "imageUrl": "",
     "githubUrl": "",
@@ -215,42 +166,17 @@
   },
   {
     "id": 12,
-    "title": "IELTS Practice Platform",
-    "description": "Free full-length mock exam website that simulates the real test format, featuring realistic timing, interactive test modules, and scoring interfaces.",
-    "category": "software",
-    "technologies": [
-      "TypeScript",
-      "Web Development",
-      "Test Simulation",
-      "UI/UX"
-    ],
-    "year": "Personal",
+    "title": "Wireless DC Motor Speed Control",
+    "description": "DC motor speed control using IR remote and 555 timer.",
+    "category": "engineering",
+    "technologies": ["IR Remote", "555 Timer", "Motor Control"],
+    "year": "Academic",
     "imageUrl": "",
     "githubUrl": "",
     "demoUrl": "",
     "status": "Completed",
     "skillLevel": "intermediate",
-    "readingTime": 8,
-    "updatedAt": "2025-01-15"
-  },
-  {
-    "id": 13,
-    "title": "ISP Movie Streaming Website",
-    "description": "Streaming platform built for a local internet service provider, enabling fast on-demand video streaming for network subscribers.",
-    "category": "software",
-    "technologies": [
-      "Full-Stack",
-      "Video Streaming",
-      "Media Delivery",
-      "REST APIs"
-    ],
-    "year": "Client Project",
-    "imageUrl": "",
-    "githubUrl": "",
-    "demoUrl": "",
-    "status": "Completed",
-    "skillLevel": "intermediate",
-    "readingTime": 9,
-    "updatedAt": "2025-01-15"
+    "readingTime": 7,
+    "updatedAt": "2024-12-01"
   }
 ]
