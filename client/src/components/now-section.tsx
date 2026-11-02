@@ -1,121 +1,131 @@
-import { BookOpen, Layers, GitBranch, Calendar } from "lucide-react";
+import { motion } from "framer-motion";
+import { BookOpen, Calendar, Activity, Terminal } from "lucide-react";
+import { fadeInUp, staggerContainer } from "@/lib/animations";
 
 export default function NowSection() {
-  // Items in progress require verified repository URLs. Unlinked items are kept queued until repo commits exist.
-  const activeProjects: Array<{
-    title: string;
-    status: "In progress" | "Prototype" | "Planned";
-    started: string;
-    description: string;
-    doneSoFar: string;
-    nextStep: string;
-    stack: string[];
-    repoUrl?: string;
-  }> = [];
-
   const learningTopics = [
     {
-      topic: "Docker & Nginx Deployment",
-      practicingIn: "Finance Tracker containerized environment"
+      topic: "Docker & Containerized Architectures",
+      practicingIn: "Microservices & isolated deployment workflows"
     },
     {
-      topic: "LLM Tool Calling & Structured Outputs",
-      practicingIn: "Finance Tracker chat assistant experiments"
+      topic: "Real-time Telemetry & Edge Streaming",
+      practicingIn: "High-throughput ThingsBoard & distributed dashboard pipelines"
     },
     {
-      topic: "Approval Workflow Design for Business Systems",
-      practicingIn: "Maintenance and Operations platform architecture"
+      topic: "Enterprise Operations & Workflow Design",
+      practicingIn: "Scalable maintenance management and approval platforms"
     }
   ];
 
   return (
-    <section id="now" className="py-20 bg-white border-t border-slate-200">
-      <div className="container mx-auto px-4 max-w-5xl">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 mb-3 border border-slate-200">
-            <Calendar className="w-3.5 h-3.5 text-slate-500" />
-            <span>Last updated: November 2026</span>
+    <section id="now" className="relative py-24 bg-white dark:bg-[#0B0F19] text-slate-900 dark:text-slate-100 border-t border-slate-200 dark:border-slate-800/80 transition-colors duration-300 overflow-hidden">
+      {/* Background glow */}
+      <div className="absolute top-1/2 left-0 w-80 h-80 bg-cyan-500/5 dark:bg-cyan-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div className="container mx-auto px-4 sm:px-6 max-w-5xl relative z-10">
+        
+        {/* Header */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-60px" }}
+          variants={fadeInUp}
+          className="text-center mb-14"
+        >
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 text-emerald-700 dark:text-emerald-400 text-xs sm:text-sm font-medium mb-3">
+            <Activity className="w-3.5 h-3.5" />
+            <span>Live Status & Continuous Growth</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-3 text-slate-900 tracking-tight">
-            Building & Learning
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 tracking-tight text-slate-900 dark:text-white">
+            What I&apos;m Doing Now
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full mb-4"></div>
-          <p className="text-slate-600 max-w-2xl mx-auto text-base">
-            What I&apos;m working on outside my job. Everything here is in progress, uses simulated data, and links to its repository.
+          <div className="w-20 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 mx-auto rounded-full mb-4"></div>
+          <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-base sm:text-lg">
+            A real-time snapshot of my active engineering focus and technical investigations.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Active Projects (rendered only when repository URL exists) */}
-        {activeProjects.length > 0 ? (
-          <div className="space-y-6 mb-12">
-            {activeProjects.map((item, idx) => (
-              <div
-                key={idx}
-                className="bg-slate-50 rounded-xl p-6 border border-slate-200"
-              >
-                <div className="flex flex-wrap items-center justify-between gap-3 mb-2">
-                  <div className="flex items-center gap-2.5">
-                    <h3 className="text-lg font-bold text-slate-900">{item.title}</h3>
-                    <span className="px-2.5 py-0.5 rounded text-xs font-semibold bg-slate-200 text-slate-800">
-                      {item.status}
-                    </span>
-                  </div>
-                  <span className="text-xs text-slate-500">Started: {item.started}</span>
-                </div>
-                <p className="text-slate-700 text-sm mb-4 leading-relaxed">{item.description}</p>
-                <div className="grid sm:grid-cols-2 gap-4 text-xs text-slate-600 mb-4 bg-white p-3.5 rounded-lg border border-slate-200">
-                  <div>
-                    <span className="font-semibold text-slate-800 block mb-1">Done so far:</span>
-                    <span>{item.doneSoFar}</span>
-                  </div>
-                  <div>
-                    <span className="font-semibold text-slate-800 block mb-1">Next:</span>
-                    <span>{item.nextStep}</span>
-                  </div>
-                </div>
-                {item.repoUrl && (
-                  <a
-                    href={item.repoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:underline"
-                  >
-                    <GitBranch className="w-3.5 h-3.5" />
-                    <span>View Repository</span>
-                  </a>
-                )}
+        {/* Live Status Command Card */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={fadeInUp}
+          className="bg-slate-50 dark:bg-slate-900/60 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-slate-200/90 dark:border-slate-800 shadow-sm dark:shadow-xl mb-10 transition-colors duration-300"
+        >
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-200 dark:border-slate-800">
+            <div className="flex items-center gap-3">
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+              </span>
+              <div>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                  <span>Current Engineering Focus</span>
+                  <span className="text-xs px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-500/15 text-emerald-800 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/30 font-mono">LIVE</span>
+                </h3>
+                <p className="text-xs text-slate-500 dark:text-slate-400">Web applications, production dashboards & data pipelines</p>
               </div>
-            ))}
-          </div>
-        ) : null}
+            </div>
 
-        {/* Currently Learning */}
-        <div className="bg-slate-50/80 rounded-2xl p-6 sm:p-8 border border-slate-200">
-          <div className="flex items-center gap-2.5 mb-5">
-            <div className="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center">
+            <div className="flex items-center gap-2 text-xs font-mono text-slate-600 dark:text-slate-400 bg-white dark:bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 self-start sm:self-auto">
+              <Calendar className="w-3.5 h-3.5 text-blue-500 dark:text-blue-400" />
+              <span>Updated November 2026</span>
+            </div>
+          </div>
+
+          <div className="pt-6">
+            <p className="text-slate-700 dark:text-slate-200 text-sm sm:text-base leading-relaxed">
+              Leading UI/UX modernization and telemetry dashboard integration for industrial monitoring systems at{" "}
+              <span className="font-semibold text-slate-900 dark:text-white">Sincos Group</span>. Building responsive web interfaces,
+              ThingsBoard visualizations, and high-reliability operational reporting tools.
+            </p>
+          </div>
+        </motion.div>
+
+        {/* Currently Learning / Technical Study */}
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          className="bg-slate-50 dark:bg-slate-900/60 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-slate-200/90 dark:border-slate-800 shadow-sm dark:shadow-xl transition-colors duration-300"
+        >
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-9 h-9 rounded-lg bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 text-blue-600 dark:text-blue-400 flex items-center justify-center">
               <BookOpen className="w-4 h-4" />
             </div>
-            <h3 className="text-lg font-bold text-slate-900">Current Technical Study</h3>
+            <div>
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white">Active Technical Investigations</h3>
+              <p className="text-xs text-slate-500 dark:text-slate-400">Deepening hands-on mastery in modern distributed architectures</p>
+            </div>
           </div>
-          <div className="grid md:grid-cols-3 gap-4">
+
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {learningTopics.map((item, i) => (
-              <div
+              <motion.div
                 key={i}
-                className="bg-white p-4 rounded-xl border border-slate-200 flex flex-col justify-between"
+                variants={fadeInUp}
+                whileHover={{ y: -4 }}
+                className="bg-white dark:bg-slate-800/60 p-5 rounded-xl border border-slate-200 dark:border-slate-700/80 flex flex-col justify-between hover:border-blue-500/40 shadow-xs transition-colors"
               >
                 <div>
-                  <h4 className="text-sm font-bold text-slate-900 mb-1.5">{item.topic}</h4>
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    <span className="font-semibold text-slate-700">Practicing in: </span>
+                  <div className="w-7 h-7 rounded-md bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-3">
+                    <Terminal className="w-3.5 h-3.5" />
+                  </div>
+                  <h4 className="text-sm font-bold text-slate-900 dark:text-white mb-2">{item.topic}</h4>
+                  <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed font-light">
+                    <span className="font-medium text-blue-600 dark:text-blue-400">Application: </span>
                     {item.practicingIn}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
+
       </div>
     </section>
   );
 }
-

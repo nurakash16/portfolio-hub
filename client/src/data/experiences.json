@@ -3,11 +3,11 @@
     "id": 1,
     "title": "Software Engineer",
     "company": "Sincos Group",
-    "description": "Develop industrial monitoring and reporting dashboards using Angular, TypeScript, JavaScript, HTML, and Tailwind CSS. Build IoT telemetry pipelines, PLC gateways, and maintenance management platforms.",
+    "description": "Develop industrial monitoring and reporting dashboards using Angular, TypeScript, JavaScript, HTML, and Tailwind CSS. Integrate IoT telemetry interfaces, PLC gateways, and maintenance management platforms.",
     "defaultHighlights": [
       "Develop industrial monitoring and reporting dashboards using Angular, TypeScript, JavaScript, HTML, and Tailwind CSS.",
       "Developed the full Angular Gateway application for communication and control of IoT and PLC devices.",
-      "Worked on MQTT-to-ThingsBoard data flows using Node-RED and REST APIs to ingest, retrieve and visualize real-time telemetry.",
+      "Integrated dashboard interfaces with MQTT-to-ThingsBoard data flows, utilizing Node-RED and REST APIs to retrieve and visualize real-time telemetry.",
       "Worked with ThingsBoard assets, entities, devices, roles and permissions, and called its APIs from custom dashboards.",
       "Contributed to the UI/UX upgrade of the Production Evaluating System (PES) dashboard frontend, redesigning layouts and fixing monitoring issues in collaboration with the team.",
       "Contributed to the Maintenance Management System across UI design, Angular frontend, API integration, and database design."
@@ -26,7 +26,7 @@
     "highlights": [
       "Develop industrial monitoring and reporting dashboards using Angular, TypeScript, JavaScript, HTML, and Tailwind CSS.",
       "Developed the full Angular Gateway application for communication and control of IoT and PLC devices.",
-      "Worked on MQTT-to-ThingsBoard data flows using Node-RED and REST APIs to ingest, retrieve and visualize real-time telemetry.",
+      "Integrated dashboard interfaces with MQTT-to-ThingsBoard data flows, utilizing Node-RED and REST APIs to retrieve and visualize real-time telemetry.",
       "Worked with ThingsBoard assets, entities, devices, roles and permissions, and called its APIs from custom dashboards.",
       "Contributed to the UI/UX upgrade of the Production Evaluating System (PES) dashboard frontend, redesigning layouts and fixing monitoring issues in collaboration with the team.",
       "Contributed to the Maintenance Management System across UI design, Angular frontend, API integration, and database design.",
