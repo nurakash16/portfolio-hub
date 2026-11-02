@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Software Engineer",
     "company": "Sincos Group",
-    "description": "Develop industrial dashboards and UI for monitoring and reporting using Angular and TypeScript. Build IoT/PLC integrations and improve responsiveness, navigation flow, and multilingual support across CMMP, EMS, and FMS platforms.",
+    "description": "Develop industrial monitoring dashboards, IoT telemetry integrations, and maintenance management systems using Angular, TypeScript, Node.js, and PostgreSQL. Build IoT/PLC gateways, MQTT-to-ThingsBoard data flows, and enterprise client platforms for Unilever, LADWP, and Gaugap.",
     "highlights": [
       "Developed industrial dashboards using Angular, TypeScript, JavaScript, HTML, and Tailwind CSS for monitoring and reporting",
       "Developed the full Angular Gateway project for communication and control of IoT and PLC devices",
@@ -14,7 +14,14 @@
       "Worked with Node-RED for device data flows and gained basic knowledge of REST API integration for IoT/PLC communication",
       "Designed multi-screen enterprise dashboards for Unilever, focusing on clear data visualization and user-friendly interaction",
       "Added multilingual support (Bangla and French) to enhance accessibility and client deployment flexibility",
-      "Provided support at Savar Continental by assessing workflows and Production Evaluating System (PES) operations, improving dashboards/software and conducting user training"
+      "Provided support at Savar Continental by assessing workflows and Production Evaluating System (PES) operations, improving dashboards/software and conducting user training",
+      "Contributed to the UI/UX upgrade of the Production Evaluating System (PES) dashboard frontend, redesigning layouts and fixing monitoring issues in collaboration with the team",
+      "Worked on enterprise dashboards for the LADWP project",
+      "Developed dashboards for the Gaugap agritech project and worked with the data path from MQTT to ThingsBoard",
+      "Worked on MQTT-to-ThingsBoard data flows, using Node-RED and REST APIs to ingest, retrieve, and visualize real-time telemetry",
+      "Worked with ThingsBoard assets, entities, devices, roles, and permissions, and called its APIs from custom dashboards",
+      "Contributed to the Maintenance Management System across UI design, Angular frontend, API integration, and database design",
+      "Researched competitor CMMS platforms (ClickMaint) and documented findings to guide feature and UX improvements"
     ],
     "showcaseLabel": "Key Systems",
     "showcaseItems": [
@@ -23,16 +30,34 @@
       "Flow Meter",
       "Carbon Emission",
       "Generator Efficiency",
-      "PES (Production Evaluating System)"
+      "PES (Production Evaluating System)",
+      "LADWP Project",
+      "Gaugap Agritech",
+      "Angular IoT Gateway",
+      "Maintenance Management System (CMMS)",
+      "ThingsBoard & MQTT Telemetry",
+      "ClickMaint UX Research"
     ],
-    "technologies": ["Angular", "TypeScript", "JavaScript", "Tailwind CSS", "Node-RED", "REST APIs"],
+    "technologies": [
+      "Angular",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+      "Node-RED",
+      "REST APIs",
+      "Node.js",
+      "PostgreSQL",
+      "ThingsBoard",
+      "MQTT",
+      "Figma"
+    ],
     "duration": "Dec 2024 - Present",
     "current": true,
     "type": "work"
   },
   {
     "id": 2,
-    "title": "Chip Designer",
+    "title": "Chip Designer (Trainee)",
     "company": "Nokshasemi",
     "description": "Designed CMOS circuits and custom layouts (65nm) and performed DRC/LVS verification in Cadence Virtuoso/Assura. Conducted device sizing, timing analysis, and parasitic and signal integrity checks.",
     "highlights": [
@@ -42,7 +67,9 @@
       "Worked on practice projects aligned with industrial chip design workflows",
       "Created stick diagrams and validated circuits with functional simulations",
       "Designed layouts following 65nm CMOS rules and achieved DRC-clean and LVS-clean results",
-      "Designed and simulated 21-stage ring oscillator, frequency divider, counter, register, buffer circuits, resettable D flip-flop (DTC logic), and 65nm CMOS operational amplifier"
+      "Designed and simulated 21-stage ring oscillator, frequency divider, counter, register, buffer circuits, resettable D flip-flop (DTC logic), and 65nm CMOS operational amplifier",
+      "Completed an industrial training program in CMOS circuit design, schematic development, and layout using Cadence Virtuoso and Assura",
+      "Applied timing analysis, parasitic analysis, and signal integrity checks to validate designs against rule-based specifications"
     ],
     "showcaseLabel": "Notable Designs",
     "showcaseItems": [
@@ -53,7 +80,13 @@
       "Resettable D Flip-Flop (DTC logic)",
       "65nm CMOS Operational Amplifier"
     ],
-    "technologies": ["CMOS Design", "Cadence Virtuoso", "Assura", "DRC/LVS", "Layout"],
+    "technologies": [
+      "CMOS Design",
+      "Cadence Virtuoso",
+      "Assura",
+      "DRC/LVS",
+      "Layout"
+    ],
     "duration": "Mar 2023 - Nov 2024",
     "current": false,
     "type": "work"
@@ -63,7 +96,11 @@
     "title": "BSc in Electrical and Electronics Engineering",
     "company": "Ahsanullah University of Science and Technology",
     "description": "CGPA 3.24.",
-    "technologies": ["EEE", "Semiconductor", "VLSI"],
+    "technologies": [
+      "EEE",
+      "Semiconductor",
+      "VLSI"
+    ],
     "duration": "Mar 2018 - Nov 2022",
     "current": false,
     "type": "education"
@@ -73,7 +110,9 @@
     "title": "Higher Secondary Certificate (Science)",
     "company": "Dhaka City College",
     "description": "CGPA 5.00.",
-    "technologies": ["Science"],
+    "technologies": [
+      "Science"
+    ],
     "duration": "Jun 2015 - Apr 2017",
     "current": false,
     "type": "education"

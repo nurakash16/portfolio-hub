@@ -6,6 +6,8 @@ import EducationSection from "@/components/education-section";
 import ProjectSection from "@/components/project-section";
 import ResearchSection from "@/components/research-section";
 import AchievementSection from "@/components/achievement-section";
+import ExtracurricularSection from "@/components/extracurricular-section";
+import ReferencesSection from "@/components/references-section";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
 import { useState } from "react";
@@ -26,6 +28,8 @@ export default function Home() {
       <ProjectSection searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <ResearchSection />
       <AchievementSection />
+      <ExtracurricularSection />
+      <ReferencesSection />
       <ContactSection />
       <Footer />
     </div>

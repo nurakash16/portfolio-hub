@@ -7,7 +7,12 @@ import {
   Settings,
   Lightbulb,
   Target,
-  TrendingUp
+  TrendingUp,
+  Server,
+  Layers,
+  Wrench,
+  Binary,
+  Sparkles
 } from "lucide-react";
 
 export default function AboutSection() {
@@ -18,6 +23,44 @@ export default function AboutSection() {
     { name: "Cadence Virtuoso", icon: Settings, gradient: "from-slate-500 to-slate-600" },
     { name: "Node-RED / IoT", icon: Network, gradient: "from-yellow-500 to-orange-500" },
     { name: "PostgreSQL", icon: Database, gradient: "from-red-500 to-pink-500" }
+  ];
+
+  const skillCategories = [
+    {
+      title: "Frontend Development",
+      icon: Code2,
+      skills: ["Angular", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "React (basic)", "WebRTC (basic)"]
+    },
+    {
+      title: "Backend & Databases",
+      icon: Server,
+      skills: ["Node.js", "REST API Design & Integration", "PostgreSQL", "Firebase", "Database Design"]
+    },
+    {
+      title: "IoT & Industrial Integration",
+      icon: Network,
+      skills: ["ThingsBoard (telemetry, assets, devices, roles, permissions)", "MQTT", "Node-RED", "IoT/PLC Gateways"]
+    },
+    {
+      title: "UI/UX & Dashboards",
+      icon: LayoutDashboard,
+      skills: ["Figma", "Industrial Dashboard Layouts", "Data Visualization", "User-Flow Planning"]
+    },
+    {
+      title: "Tools & Deployment",
+      icon: Wrench,
+      skills: ["Git / GitHub", "Docker Compose (basic)", "Nginx (basic)", "Linux CLI", "LLM API (basic)"]
+    },
+    {
+      title: "Programming & Engineering",
+      icon: Binary,
+      skills: ["Python", "C/C++", "MATLAB", "Verilog HDL", "CMOS / VLSI Design (Cadence Virtuoso / Assura)", "DRC / LVS Verification"]
+    },
+    {
+      title: "Core Strengths",
+      icon: Sparkles,
+      skills: ["Problem-solving", "Clear Communication", "Fast Learning", "Cross-functional Teamwork", "Adaptability"]
+    }
   ];
 
   const values = [
@@ -48,18 +91,26 @@ export default function AboutSection() {
               <div>
                 <h3 className="text-2xl font-semibold mb-6 text-gray-800">Professional Journey</h3>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  Engineer with hands-on experience in software engineering and industrial application development,
-                  backed by a strong foundation in VLSI design and layout.
+                  Software Engineer with hands-on experience building industrial IoT dashboards, monitoring platforms,
+                  and maintenance management systems using Angular, TypeScript, Node.js, and PostgreSQL.
+                </p>
+                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                  Experienced in the full lifecycle from user research and UI/UX design to frontend development,
+                  API integration, and database design. Skilled in real-time telemetry platforms (ThingsBoard, MQTT, Node-RED)
+                  and collaborating on enterprise client projects.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Skilled in building industrial dashboards with Angular and TypeScript, along with CMOS circuit
-                  implementation, custom layout creation, and DRC/LVS verification.
+                  Electrical and Electronics Engineering graduate with a strong foundation in VLSI design, CMOS circuit
+                  implementation, and DRC/LVS verification, providing deep analytical and debugging skills.
                 </p>
               </div>
               <div className="relative">
                 <div className="floating-element">
-                  <div className="w-64 h-64 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-3xl backdrop-blur-sm border border-white/30 flex items-center justify-center mx-auto">
-                    <div className="text-6xl gradient-text font-bold">EE</div>
+                  <div className="w-64 h-64 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-3xl backdrop-blur-sm border border-white/30 flex items-center justify-center mx-auto shadow-inner">
+                    <div className="text-center">
+                      <div className="text-6xl gradient-text font-bold mb-1">EE</div>
+                      <div className="text-sm font-semibold text-gray-600 uppercase tracking-widest">Engineer</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -82,7 +133,7 @@ export default function AboutSection() {
             })}
           </div>
 
-          {/* Technical Skills */}
+          {/* Technical Skills Overview */}
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-4 gradient-text">Technical Expertise</h3>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -90,7 +141,7 @@ export default function AboutSection() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
             {skills.map((skill, index) => {
               const IconComponent = skill.icon;
               return (
@@ -105,6 +156,44 @@ export default function AboutSection() {
                   <h4 className="font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">
                     {skill.name}
                   </h4>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Comprehensive Skills Breakdown */}
+          <div className="text-center mb-10">
+            <h3 className="text-2xl md:text-3xl font-bold mb-3 text-gray-800">
+              Comprehensive Skills Matrix
+            </h3>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Detailed breakdown of specialized technical capabilities and toolsets
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {skillCategories.map((cat, idx) => {
+              const CatIcon = cat.icon;
+              return (
+                <div key={idx} className="modern-card p-6 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600">
+                        <CatIcon className="w-5 h-5" />
+                      </div>
+                      <h4 className="text-lg font-bold text-gray-800">{cat.title}</h4>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {cat.skills.map((s, sIdx) => (
+                        <span
+                          key={sIdx}
+                          className="px-3 py-1.5 bg-slate-100 hover:bg-blue-50 hover:text-blue-700 text-slate-700 rounded-lg text-sm font-medium border border-slate-200 transition-colors"
+                        >
+                          {s}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               );
             })}

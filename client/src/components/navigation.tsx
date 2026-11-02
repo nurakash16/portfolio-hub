@@ -79,6 +79,18 @@ export default function Navigation({ searchQuery, setSearchQuery }: NavigationPr
             >
               Research
             </button>
+            <button
+              onClick={() => scrollToSection("activities")}
+              className="text-gray-700 hover:text-primary transition-colors cursor-pointer"
+            >
+              Activities
+            </button>
+            <button
+              onClick={() => scrollToSection("references")}
+              className="text-gray-700 hover:text-primary transition-colors cursor-pointer"
+            >
+              References
+            </button>
           </div>
 
           {/* Desktop Social Links */}
@@ -170,6 +182,18 @@ export default function Navigation({ searchQuery, setSearchQuery }: NavigationPr
                 className="block text-gray-700 hover:text-primary transition-colors cursor-pointer py-2 text-left font-medium"
               >
                 Research
+              </button>
+              <button
+                onClick={() => scrollToSection("activities")}
+                className="block text-gray-700 hover:text-primary transition-colors cursor-pointer py-2 text-left"
+              >
+                Activities
+              </button>
+              <button
+                onClick={() => scrollToSection("references")}
+                className="block text-gray-700 hover:text-primary transition-colors cursor-pointer py-2 text-left"
+              >
+                References
               </button>
 
               {/* Mobile Social Links */}

@@ -1,4 +1,4 @@
-import { User, Linkedin, Github, Facebook, Mail, MapPin } from "lucide-react";
+import { User, Linkedin, Github, Facebook, Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Footer() {
@@ -59,6 +59,13 @@ export default function Footer() {
               >
                 <Mail className="h-6 w-6 text-white" />
               </a>
+              <a
+                href="tel:+8801521515249"
+                title="+88015-21515249"
+                className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 pulse-glow"
+              >
+                <Phone className="h-6 w-6 text-white" />
+              </a>
             </div>
           </div>
 
@@ -106,6 +113,30 @@ export default function Footer() {
                   Contact
                 </button>
               </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection("research")}
+                  className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer hover:translate-x-1 duration-200"
+                >
+                  Research
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection("activities")}
+                  className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer hover:translate-x-1 duration-200"
+                >
+                  Activities
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection("references")}
+                  className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer hover:translate-x-1 duration-200"
+                >
+                  References
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -149,6 +180,18 @@ export default function Footer() {
                     className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     nurakash16@gmail.com
+                  </a>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <Phone className="h-4 w-4 mt-1 text-gray-400" />
+                <div>
+                  <p className="text-gray-300 text-sm">Phone</p>
+                  <a
+                    href="tel:+8801521515249"
+                    className="text-gray-400 hover:text-white transition-colors text-sm"
+                  >
+                    +88015-21515249
                   </a>
                 </div>
               </li>

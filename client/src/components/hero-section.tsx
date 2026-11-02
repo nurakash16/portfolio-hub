@@ -1,4 +1,4 @@
-import { Github, Linkedin, Facebook } from "lucide-react";
+import { Github, Linkedin, Facebook, FileDown } from "lucide-react";
 import heroImage from "@/assets/hero.jpg";
 
 export default function HeroSection() {
@@ -49,15 +49,15 @@ export default function HeroSection() {
             </div>
 
             <p className="text-xl md:text-2xl text-blue-50 leading-relaxed max-w-xl mb-8 font-light">
-              Building <span className="text-cyan-300 font-medium">industrial dashboards</span> and
-              <span className="text-yellow-300 font-medium"> software systems</span> with Angular and TypeScript,
+              Building <span className="text-cyan-300 font-medium">industrial IoT dashboards</span> and
+              <span className="text-yellow-300 font-medium"> monitoring systems</span> with Angular, TypeScript, Node.js, and PostgreSQL,
               while maintaining strong expertise in
-              <span className="text-green-300 font-medium"> VLSI design</span> and CMOS layout.
+              <span className="text-green-300 font-medium"> VLSI design</span> and real-time telemetry.
             </p>
 
             {/* Expertise Tags */}
             <div className="flex flex-wrap gap-3 mb-12">
-              {["Angular", "TypeScript", "VLSI Design", "Cadence Virtuoso", "Node-RED"].map((skill, index) => (
+              {["Angular", "TypeScript", "Node.js", "PostgreSQL", "ThingsBoard", "MQTT", "VLSI Design", "Cadence Virtuoso", "Node-RED"].map((skill, index) => (
                 <span
                   key={index}
                   className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm text-white hover:bg-white/20 transition-all duration-300"
@@ -67,32 +67,43 @@ export default function HeroSection() {
               ))}
             </div>
 
-            {/* Social Links */}
-            <div className="flex gap-6">
+            {/* Action Buttons & Social Links */}
+            <div className="flex flex-wrap items-center gap-5">
               <a
-                href="https://www.linkedin.com/in/nur-alam-akash/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-14 h-14 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-300"
+                href="/Md_Nur_Alam_Akash_CV_v1.1.pdf"
+                download="Md_Nur_Alam_Akash_CV_v1.1.pdf"
+                className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
               >
-                <Linkedin className="h-6 w-6" />
+                <FileDown className="h-5 w-5" />
+                <span>Download CV</span>
               </a>
-              <a
-                href="https://github.com/nurakash16"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-14 h-14 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-300"
-              >
-                <Github className="h-6 w-6" />
-              </a>
-              <a
-                href="https://www.facebook.com/nuralam.akash.3"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-14 h-14 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-300"
-              >
-                <Facebook className="h-6 w-6" />
-              </a>
+
+              <div className="flex gap-4">
+                <a
+                  href="https://www.linkedin.com/in/nur-alam-akash/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-300"
+                >
+                  <Linkedin className="h-5 w-5" />
+                </a>
+                <a
+                  href="https://github.com/nurakash16"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-300"
+                >
+                  <Github className="h-5 w-5" />
+                </a>
+                <a
+                  href="https://www.facebook.com/nuralam.akash.3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-300"
+                >
+                  <Facebook className="h-5 w-5" />
+                </a>
+              </div>
             </div>
           </div>
 

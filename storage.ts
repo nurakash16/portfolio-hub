@@ -50,6 +50,55 @@ export class MemStorage implements IStorage {
   private initializePortfolioData() {
     const sampleProjects: InsertProject[] = [
       {
+        title: "Real-Time Chat Application",
+        description: "Chat app with a React web version, built on Firebase and WebRTC. Supports text, emoji, voice messages, image, audio and document sharing, and voice and video calls.",
+        technologies: ["React", "Firebase", "WebRTC", "TypeScript", "Notifications"],
+        category: "software",
+        status: "completed",
+        year: "2024",
+        imageUrl: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
+        demoUrl: "https://hellosam.vercel.app/"
+      },
+      {
+        title: "Full-Stack Finance Tracker",
+        description: "Full-stack finance app (Angular, Node.js, PostgreSQL) with data visualization and an AI assistant that answers questions about spending. Runs with Docker Compose.",
+        technologies: ["Angular", "Node.js", "PostgreSQL", "Docker Compose", "AI Assistant", "Data Visualization"],
+        category: "software",
+        status: "completed",
+        year: "2024",
+        imageUrl: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
+        demoUrl: "https://exintrack.vercel.app/"
+      },
+      {
+        title: "IELTS Practice Platform",
+        description: "Free full-length mock exam website that simulates the real test format.",
+        technologies: ["TypeScript", "Web Development", "Test Simulation", "UI/UX"],
+        category: "software",
+        status: "completed",
+        year: "2025",
+        imageUrl: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
+      },
+      {
+        title: "Graduate Records System",
+        description: "Full-stack application for managing and displaying graduate information.",
+        technologies: ["Full-Stack", "Database", "CRUD", "TypeScript"],
+        category: "software",
+        status: "completed",
+        year: "2024",
+        imageUrl: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
+        demoUrl: "https://graduates-db.vercel.app/"
+      },
+      {
+        title: "ISP Movie Streaming Website",
+        description: "Streaming platform built for a local internet service provider.",
+        technologies: ["Full-Stack", "Video Streaming", "Media Delivery", "REST APIs"],
+        category: "software",
+        status: "completed",
+        year: "2024",
+        imageUrl: "https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
+      },
+
+      {
         title: "16-bit Single-cycle MIPS Processor (PNR)",
         description: "VLSI project implementing a complete 16-bit MIPS processor with place and route design.",
         technologies: ["VLSI", "Verilog", "Cadence", "Digital Design"],
@@ -124,6 +173,25 @@ export class MemStorage implements IStorage {
     ];
 
     const sampleExperiences: InsertExperience[] = [
+      {
+        title: "Software Engineer",
+        company: "Sincos Group",
+        duration: "Feb 2025 - Present",
+        description: "Develop industrial monitoring and reporting dashboards using Angular, TypeScript, JavaScript, HTML, and Tailwind CSS. Build IoT integrations (ThingsBoard, MQTT, Node-RED, Angular Gateway) and maintenance management systems across UI design, frontend development, API integration, and database design.",
+        technologies: ["Angular", "TypeScript", "Node.js", "PostgreSQL", "ThingsBoard", "MQTT", "Node-RED", "Tailwind CSS", "Figma"],
+        type: "work",
+        current: true
+      },
+      {
+        title: "Chip Designer (Trainee)",
+        company: "Nokshasemi",
+        duration: "Nov 2023 - Nov 2024",
+        description: "Completed an industrial training program in CMOS circuit design, schematic development, and layout using Cadence Virtuoso and Assura. Designed and verified 65nm CMOS circuits (ring oscillator, frequency divider, counter, flip-flop, op-amp), achieving DRC-clean and LVS-clean layouts. Applied timing analysis, parasitic analysis, and signal integrity checks.",
+        technologies: ["CMOS Design", "Cadence Virtuoso", "Assura", "DRC/LVS", "Layout", "Verilog HDL"],
+        type: "work",
+        current: false
+      },
+
       {
         title: "IC Layout Design Engineer",
         company: "Sincos Group",

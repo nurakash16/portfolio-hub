@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github, Facebook, MapPin } from "lucide-react";
+import { Mail, Linkedin, Github, Facebook, MapPin, Phone } from "lucide-react";
 
 export default function ContactSection() {
   const contactInfo = [
@@ -22,6 +22,13 @@ export default function ContactSection() {
       value: "@nurakash16",
       href: "https://github.com/nurakash16",
       color: "text-gray-800"
+    },
+    {
+      icon: Phone,
+      label: "Phone",
+      value: "+88015-21515249",
+      href: "tel:+8801521515249",
+      color: "text-emerald-600"
     },
     {
       icon: Facebook,
@@ -60,6 +67,7 @@ export default function ContactSection() {
                   const IconComponent = contact.icon;
                   const gradients: Record<string, string> = {
                     "Email": "from-red-500 to-pink-500",
+                    "Phone": "from-emerald-500 to-teal-500",
                     "LinkedIn": "from-blue-600 to-blue-700",
                     "GitHub": "from-gray-700 to-gray-800",
                     "Facebook": "from-blue-600 to-blue-800"
