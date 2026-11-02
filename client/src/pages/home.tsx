@@ -8,7 +8,6 @@ import ResearchSection from "@/components/research-section";
 import AchievementSection from "@/components/achievement-section";
 import EducationSection from "@/components/education-section";
 import ExtracurricularSection from "@/components/extracurricular-section";
-import ReferencesSection from "@/components/references-section";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
 
@@ -26,7 +25,6 @@ export default function Home() {
         <AchievementSection />
         <EducationSection />
         <ExtracurricularSection />
-        <ReferencesSection />
         <ContactSection />
       </main>
       <Footer />

@@ -1,4 +1,4 @@
-import { Github, Linkedin, FileDown, Mail } from "lucide-react";
+import { Github, Linkedin, FileDown } from "lucide-react";
 import heroImage from "@/assets/hero.jpg";
 
 export default function HeroSection() {
@@ -9,48 +9,70 @@ export default function HeroSection() {
     "PostgreSQL",
     "ThingsBoard",
     "MQTT",
+    "VLSI Design",
+    "Cadence Virtuoso",
     "Node-RED"
   ];
 
   return (
-    <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 text-white">
-      {/* Subtle Ambient Background */}
-      <div className="absolute inset-0 opacity-40 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/30 via-transparent to-transparent pointer-events-none"></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-20 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-400/10 rounded-full blur-3xl animate-pulse animation-delay-1000"></div>
+        <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-cyan-400/10 rounded-full blur-3xl animate-pulse animation-delay-2000"></div>
+      </div>
+
+      {/* Circuit Pattern Overlay */}
+      <div className="absolute inset-0 opacity-5">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="circuit" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+              <path d="M20,20 L80,20 L80,80 L20,80 Z" fill="none" stroke="white" strokeWidth="1" />
+              <circle cx="20" cy="20" r="3" fill="white" />
+              <circle cx="80" cy="20" r="3" fill="white" />
+              <circle cx="80" cy="80" r="3" fill="white" />
+              <circle cx="20" cy="80" r="3" fill="white" />
+              <path d="M50,20 L50,80 M20,50 L80,50" stroke="white" strokeWidth="0.5" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#circuit)" />
+        </svg>
+      </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20">
+      <div className="relative z-10 container mx-auto px-4 py-20 text-white">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
           {/* Left Column: Text Content */}
           <div className="text-left order-2 md:order-1">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/20 text-blue-300 text-xs font-semibold uppercase tracking-wider mb-5">
-              Available for Software Roles
-            </div>
-
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-3 tracking-tight text-white leading-tight">
-              Md. Nur Alam Akash
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent leading-tight">
+              MD. NUR ALAM AKASH
             </h1>
 
-            <div className="mb-5">
-              <h2 className="text-2xl sm:text-3xl font-semibold text-blue-200 mb-1">
+            <div className="mb-6">
+              <h2 className="text-2xl md:text-4xl font-light text-blue-100 mb-2">
                 Software Engineer
               </h2>
-              <p className="text-base sm:text-lg text-slate-300 font-normal">
-                Industrial dashboards, IoT integration and full-stack development
-              </p>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
             </div>
 
-            <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-xl mb-7 font-light">
-              I build industrial monitoring dashboards and IoT/PLC integrations with Angular and TypeScript,
-              backed by an Electrical and Electronics Engineering and VLSI design background.
+            <p className="text-xl md:text-2xl text-blue-50 leading-relaxed max-w-xl mb-8 font-light">
+              Building <span className="text-cyan-300 font-medium">industrial IoT dashboards</span> and
+              <span className="text-yellow-300 font-medium"> monitoring systems</span> with Angular, TypeScript, Node.js, and PostgreSQL,
+              while maintaining strong expertise in
+              <span className="text-green-300 font-medium"> VLSI design</span> and real-time telemetry.
             </p>
 
-            {/* Chips */}
-            <div className="flex flex-wrap gap-2 mb-8">
+            {/* Expertise Tags */}
+            <div className="flex flex-wrap gap-3 mb-12">
               {chips.map((skill, index) => (
                 <span
                   key={index}
-                  className="px-3.5 py-1.5 bg-slate-800/80 border border-slate-700/80 rounded-full text-xs sm:text-sm font-medium text-slate-200 hover:border-blue-400/60 hover:text-white transition-colors"
+                  className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm text-white hover:bg-white/20 transition-all duration-300"
                 >
                   {skill}
                 </span>
@@ -58,31 +80,23 @@ export default function HeroSection() {
             </div>
 
             {/* Action Buttons & Social Links */}
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center gap-5">
               <a
                 href="/Md_Nur_Alam_Akash_CV.pdf"
                 download="Md_Nur_Alam_Akash_CV.pdf"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-900"
+                className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
               >
-                <FileDown className="h-4 w-4" />
+                <FileDown className="h-5 w-5" />
                 <span>Download CV</span>
               </a>
 
-              <a
-                href="#contact"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 text-slate-100 font-medium rounded-full border border-slate-700 hover:border-slate-600 transition-all focus:outline-none focus:ring-2 focus:ring-blue-400"
-              >
-                <Mail className="h-4 w-4 text-blue-400" />
-                <span>Contact</span>
-              </a>
-
-              <div className="flex items-center gap-2.5 ml-1">
+              <div className="flex gap-4">
                 <a
                   href="https://www.linkedin.com/in/nur-alam-akash/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="LinkedIn profile of Md. Nur Alam Akash"
-                  className="w-11 h-11 bg-slate-800/80 border border-slate-700/80 rounded-full flex items-center justify-center text-slate-300 hover:text-white hover:bg-slate-700 transition-all focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  aria-label="LinkedIn profile"
+                  className="w-12 h-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-300"
                 >
                   <Linkedin className="h-5 w-5" />
                 </a>
@@ -90,8 +104,8 @@ export default function HeroSection() {
                   href="https://github.com/nurakash16"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="GitHub profile of Md. Nur Alam Akash"
-                  className="w-11 h-11 bg-slate-800/80 border border-slate-700/80 rounded-full flex items-center justify-center text-slate-300 hover:text-white hover:bg-slate-700 transition-all focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  aria-label="GitHub profile"
+                  className="w-12 h-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-300"
                 >
                   <Github className="h-5 w-5" />
                 </a>
@@ -101,32 +115,36 @@ export default function HeroSection() {
 
           {/* Right Column: Profile Image */}
           <div className="flex justify-center md:justify-end order-1 md:order-2">
-            <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80">
-              <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl border border-slate-700/70 bg-slate-800">
+            <div className="relative w-64 h-64 md:w-80 md:h-80">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full blur-2xl opacity-50 animate-pulse"></div>
+              <div className="relative w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-6xl font-bold text-white shadow-2xl border-4 border-white/20 overflow-hidden">
                 <img
                   src={heroImage}
                   alt="Md. Nur Alam Akash portrait"
                   width={320}
                   height={320}
-                  fetchpriority="high"
                   className="w-full h-full object-cover"
                 />
               </div>
+
+              {/* Decorative Elements around image */}
+              <div className="absolute -top-4 -right-4 w-12 h-12 bg-yellow-400 rounded-full blur-xl opacity-60 animate-bounce"></div>
+              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-cyan-400 rounded-full blur-xl opacity-60 animate-bounce animation-delay-1000"></div>
             </div>
           </div>
 
         </div>
       </div>
 
-      {/* Scroll Down Indicator */}
+      {/* Scroll Indicator */}
       <a
         href="#experience"
         aria-label="Scroll down to Experience section"
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 text-slate-300 hover:text-white flex flex-col items-center gap-1.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-md p-1"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/80 hover:text-white animate-bounce flex flex-col items-center"
       >
-        <span className="font-medium tracking-wide">Scroll Down</span>
-        <div className="w-5 h-8 border border-slate-500 rounded-full flex justify-center p-1">
-          <div className="w-1 h-2 bg-slate-300 rounded-full"></div>
+        <span className="text-sm mb-2 font-medium">Scroll Down</span>
+        <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-white/80 rounded-full mt-2 animate-pulse"></div>
         </div>
       </a>
     </section>
